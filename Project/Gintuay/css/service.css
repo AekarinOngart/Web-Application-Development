@@ -1,0 +1,83 @@
+/*Default*/
+
+@import 'https://fonts.googleapis.com/css?family=Kanit|Prompt';
+html,
+body {
+    background: #FFBD59;
+    font-family: 'Kanit', sans-serif;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.service-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85%;
+}
+
+.box {
+    padding: 2% 9%;
+    font-size: 300%;
+    color: #FFBD59;
+    background-color: white;
+    border-radius: 10px;
+    border: 10px solid #7F664F;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+
+/* 
+#Device = Low Resolution Tablets, Mobiles (Landscape)
+#Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+    service-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    .box {
+        padding: 1% 10%;
+        font-size: 150%;
+        color: #FFBD59;
+        background-color: white;
+        border-radius: 10px;
+        border: 4px solid #7F664F;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+
+/* 
+#Device = Most of the Smartphones Mobiles (Portrait)
+#Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .service-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 85%;
+    }
+    .box {
+        padding: 1% 10%;
+        font-size: 100%;
+        color: #FFBD59;
+        background-color: white;
+        border-radius: 10px;
+        border: 4px solid #7F664F;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
