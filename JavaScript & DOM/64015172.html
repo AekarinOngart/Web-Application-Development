@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 64015172 เอกรินทร์ องอาจ -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Gallery</title>
+    <style>
+        .listInfo {
+            display: none;
+            /* ซ่อนข้อมูล */
+        }
+        
+        .textColor {
+            color: #daa1cf;
+            /* สีข้อความ */
+            cursor: pointer;
+            /* เปลี่ยนเป็นลูกศร */
+        }
+        
+        li>.textColor {
+            display: inline;
+            /* แสดงข้อความ */
+        }
+        
+        img {
+            width: 480px;
+            /* กำหนดความกว้างของรูปภาพ */
+        }
+        
+        .info-container>.textColor {
+            display: inline;
+            /* ค่าเริ่มต้น */
+        }
+    </style>
+</head>
+
+<body onload="Switch()">
+    <!-- โหลดเว็บเสร็จแล้วให้เรียกฟังก์ชัน Switch() -->
+
+    <div class="head-container">
+        <h2>My First JavaScript</h2>
+        <button id="dateButton" onclick="ShowDate()">
+        Click me to display Date and Time.
+      </button>
+        <!-- เมื่อคลิกปุ่ม ให้เรียกฟังก์ชัน ShowDate() -->
+    </div>
+
+    <div class="info-container">
+        <br />
+        <p class="textColor" id="personalInfo" onmouseout="InfoColor(onmouse = 0)" onmouseover="InfoColor(onmouse = 1)" onclick="Switch()">
+            Personal Info
+        </p>
+        <!-- เมื่อเมาส์อยู่บนข้อความ ให้เรียกฟังก์ชัน InfoColor() และเมื่อคลิก ให้เรียกฟังก์ชัน Switch() -->
+        <ul class="listInfo" id="textInfo">
+            <li>Aekarin Ongart, ID: 64015172</li>
+            <li>Subject: WEB APPLICATION DEVELOPMENT</li>
+            <li>Semester: 1/2565</li>
+        </ul>
+    </div>
+
+    <div class="footer-container">
+        <h1>Snapshots</h1>
+        <ul>
+            <li>
+                <p class="textColor" onclick="Image(0)">Fireworks</p>
+                <!-- เมื่อคลิก ให้เรียกฟังก์ชัน Image(0) -->
+            </li>
+            <li>
+                <p class="textColor" onclick="Image(1)">Crest</p>
+                <!-- เมื่อคลิก ให้เรียกฟังก์ชัน Image(1) -->
+            </li>
+            <li>
+                <p class="textColor" onclick="Image(2)">Action</p>
+                <!-- เมื่อคลิก ให้เรียกฟังก์ชัน Image(2) -->
+            </li>
+            <li>
+                <p class="textColor" onclick="Image(3)">Buffalo</p>
+                <!-- เมื่อคลิก ให้เรียกฟังก์ชัน Image(3) -->
+            </li>
+        </ul>
+        <img class="banner" id="banner" src="https://www.img.in.th/images/83a02b91f9d1a768266f828658c9c88c.jpg" />
+    </div>
+
+    <script>
+        let backgroundColor = [
+            "#ff1c0e",
+            "#006b06",
+            "#0011ff",
+            "#ffc6d2",
+            "#00d800",
+            "#00e6f9",
+        ]; // สร้าง array สำหรับเก็บสีพื้นหลัง
+        let color = [
+            "#00e6f9",
+            "#ffc6d2",
+            "#ffffff",
+            "#006b06",
+            "#ffc6d2",
+            "#daa1cf",
+        ]; // สร้าง array สำหรับเก็บสีข้อความ
+        let index = 0; // สร้างตัวแปร index เพื่อเก็บค่า index ของ array
+        let image = [
+            "https://www.img.in.th/images/fe589ca67eb5143151dbda5fd7f14581.jpg",
+            "https://www.img.in.th/images/679b28e2e652c5a55bdafb01dec6436c.jpg",
+            "https://www.img.in.th/images/338a4c23cffac8ba45c2b92c78d57f8d.jpg",
+            "https://www.img.in.th/images/adab5aa53af9810ede5a72fce14123b5.png",
+        ];
+        let click = document.getElementById("textInfo"); // สร้างตัวแปร click เพื่อเก็บค่าของ id textInfo ที่อยู่ใน div class info-container
+
+        function ShowDate() {
+            // สร้างฟังก์ชัน ShowDate()
+            while (index < 6) {
+                // วนลูปเพื่อเปลี่ยนสีพื้นหลัง
+                document.getElementById("dateButton").innerHTML = Date(); // แสดงวันที่และเวลา
+                document.getElementById("dateButton").style.backgroundColor =
+                    backgroundColor[index]; // เปลี่ยนสีพื้นหลัง
+                document.getElementById("dateButton").style.color = color[index]; // เปลี่ยนสีข้อความ
+                index++;
+                break;
+            }
+            if (index == 6) {
+                // ถ้า index เท่ากับ 6 ให้เริ่มต้น index ใหม่
+                index = 0;
+            }
+        }
+
+        function InfoColor(onmouse) {
+            // สร้างฟังก์ชัน InfoColor() โดยรับค่า onmouse มาจาก event ของ mouseover และ mouseout
+            if (onmouse == 1) {
+                // ถ้าเมาส์อยู่บนข้อความ
+                document.getElementById("personalInfo").style.backgroundColor =
+                    "#fff000"; // เปลี่ยนสีพื้นหลัง
+                document.getElementById("personalInfo").style.color = "#0011ff"; // เปลี่ยนสีข้อความ
+            } else {
+                // ถ้าเมาส์อยู่นอกข้อความ
+                document.getElementById("personalInfo").style.color = "#ffc6d2"; // เปลี่ยนสีข้อความ
+                document.getElementById("personalInfo").style.backgroundColor =
+                    "#ffffff"; // เปลี่ยนสีพื้นหลัง
+            }
+        }
+
+        function Switch() {
+            // สร้างฟังก์ชัน Switch()
+            if (click.style.display === "none") {
+                // ถ้าข้อความถูกซ่อน
+                click.style.display = "block"; // แสดงข้อความ
+            } else {
+                // ถ้าข้อความถูกแสดง
+                click.style.display = "none"; // ซ่อนข้อความ
+            }
+        }
+
+        function Image(number) {
+            // สร้างฟังก์ชัน Image() โดยรับค่า number
+            document.getElementById("banner").src = image[number]; // เปลี่ยนรูปภาพ
+        }
+    </script>
+</body>
+
+</html>

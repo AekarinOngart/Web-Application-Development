@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ข้อที่ 2</title>
+    <style>
+        legend {
+            font-style: italic;
+        }
+    </style>
+    <!-- 64015172 เอกรินทร์ องอาจ -->
+</head>
+<body>
+    <form action="http://www.example.com/" method="get">
+        <fieldset>
+            <legend>Contact Information</legend> 
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname"><br> 
+            <label for="email">E-mail:</label>
+            <input type="email" name="email"><br> 
+            </fieldset>
+        <fieldset>
+            <legend>Competition Question</legend> 
+            <label>How tall is the Eiffel Tower in Paris, France?</label><br>
+            <input type="radio" id="584ft" name="tall" value="584">
+            <label for="584ft">584ft</label><br>
+            <input type="radio" id="784ft" name="tall" value="784">
+            <label for="784ft">784ft</label><br>
+            <input type="radio" id="984ft" name="tall" value="984">
+            <label for="984ft">984ft</label><br>
+            <input type="radio" id="1184ft" name="tall" value="1184">
+            <label for="1184ft">1184ft</label>
+        </fieldset>
+        <fieldset>
+            <legend>Tiebreaker Question</legend> 
+            <label>In 25 words or less,say why you would like to win $10,000:</label><br>
+            <textarea rows="10" cols="40" maxlength="25" name="comment"></textarea>
+        </fieldset>
+        <fieldset>
+            <legend>Enter Competition</legend> 
+            <input type="submit" name="btnSummit" value="Enter Competition">
+        </fieldset>
+    </form>
+</body>
+</html>
