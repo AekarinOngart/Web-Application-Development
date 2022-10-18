@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>Group's Members</h1>
+        <button type="button" onclick="vote()">Click to Vote</button>
+        <p id="score" style="display: inline; margin-left: 10%; margin-right: 10%;">Min</p><button type="button" onclick="unvote()">Click to Unvote</button></center>
+    <script type="text/javascript">
+        var n = 0
+
+        function vote() {
+            n++;
+            if (n > 10) {
+                alert("Cannot unvote")
+            }
+            if (n > 9) {
+                n = 10;
+                document.getElementById("score").innerHTML = "MAX";
+            } else {
+                document.getElementById("score").innerHTML = n;
+            }
+        }
+
+        function unvote() {
+            n--;
+            if (n < 0) {
+                alert("Cannot unvote")
+            }
+            if (n < 1) {
+                n = 0;
+                document.getElementById("score").innerHTML = "MIN";
+
+            } else {
+                document.getElementById("score").innerHTML = n;
+            }
+        }
+    </script>
+</body>
+
+</html>
