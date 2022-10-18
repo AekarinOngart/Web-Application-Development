@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 </head>
 
@@ -12,34 +12,41 @@
     <center>
         <h1>Group's Members</h1>
         <button type="button" onclick="vote()">Click to Vote</button>
-        <p id="score" style="display: inline; margin-left: 10%; margin-right: 10%;">Min</p><button type="button" onclick="unvote()">Click to Unvote</button></center>
-    <script type="text/javascript">
-        var n = 0
+        <!-- เมื่อกดปุ่ม จะเรียกใช้ฟังก์ชัน vote() -->
+        <p id="score" style="display: inline; margin-left: 10%; margin-right: 10%">
+            Min
+        </p>
+        <button type="button" onclick="unvote()">Click to Unvote</button>
+        <!-- เมื่อกดปุ่ม จะเรียกใช้ฟังก์ชัน unvote() -->
+    </center>
+
+    <script>
+        // ส่วนของการเขียน Javascript
+        var n = 0; // ตัวแปรเก็บค่าคะแนน
 
         function vote() {
-            n++;
+            n++; // เพิ่มคะแนน
             if (n > 10) {
-                alert("Cannot unvote")
+                alert("Cannot unvote"); // ถ้าคะแนนมากกว่า 10 แสดงข้อความ
             }
             if (n > 9) {
-                n = 10;
-                document.getElementById("score").innerHTML = "MAX";
+                n = 10; // ถ้าคะแนนมากกว่า 9 ให้เป็น 10
+                document.getElementById("score").innerHTML = "MAX"; // แสดงคะแนนเป็น MAX
             } else {
-                document.getElementById("score").innerHTML = n;
+                document.getElementById("score").innerHTML = n; // แสดงคะแนนเป็นตัวเลข
             }
         }
 
         function unvote() {
-            n--;
+            n--; // ลดคะแนน
             if (n < 0) {
-                alert("Cannot unvote")
+                alert("Cannot unvote"); // ถ้าคะแนนน้อยกว่า 0 แสดงข้อความ
             }
             if (n < 1) {
-                n = 0;
-                document.getElementById("score").innerHTML = "MIN";
-
+                n = 0; // ถ้าคะแนนน้อยกว่า 1 ให้เป็น 0
+                document.getElementById("score").innerHTML = "MIN"; // แสดงคะแนนเป็น MIN
             } else {
-                document.getElementById("score").innerHTML = n;
+                document.getElementById("score").innerHTML = n; // แสดงคะแนนเป็นตัวเลข
             }
         }
     </script>
