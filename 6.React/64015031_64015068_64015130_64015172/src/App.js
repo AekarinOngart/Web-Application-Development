@@ -11,10 +11,39 @@ class Header extends Component {
   }
 }
 
-
 class Blogs extends Component {
   state = {
-    value1: "MIN" // กำหนดค่าเริ่มต้นของ value1 เป็น MIN
+    vote: "MIN" 
+  }
+
+  addVote = () => {
+    if (this.state.vote === "MIN") {
+      this.setState({ vote: 1 })
+    }
+    else if (this.state.vote < 10) {
+      this.setState({ vote: this.state.vote + 1 })
+      if (this.state.vote === 9) {
+        this.setState({ vote: "MAX" })
+      }
+    } 
+    else {
+      alert("Cannot Vote")
+    }
+  }
+
+  removeVote = () => {
+    if (this.state.vote === "MAX") {
+      this.setState({ vote: 9 })
+    }
+    else if (this.state.vote > 0) {
+      this.setState({ vote: this.state.vote - 1 })
+      if (this.state.vote === 1) {
+        this.setState({ vote: "MIN" })
+      }
+    } 
+    else {
+      alert("Cannot Unvote")
+    }
   }
 
   render() {
@@ -24,27 +53,22 @@ class Blogs extends Component {
           <h1>{this.props.name}</h1>
           <img src={this.props.img} alt="" class="pic"></img>
           <h2>{this.props.studentID}</h2>
-
           <div class="flex-content">
             <p>{this.props.content}</p>
           </div>
           <div class="buttongroup">
             <div class="flexbutton">
-              <button class="buttons" type="button" onClick="">Click to Vote</button>
-              <div class="vote"><h2>{this.state.value1.toString()}</h2></div>
-              <button class="buttons" type="button" onClick="">Click to Unvote</button>
+              <button class="buttons" onClick={this.addVote}>Click to Vote</button>
+              <div class="vote"><h2>{this.state.vote}</h2></div>
+              <button class="buttons" onClick={this.removeVote}>Click to Unvote</button>
             </div>
           </div>
         </div>
       </div>
     ); 
-    // ใช้ this.props.name เพื่อแสดงค่าของ name
-    // ใช้ this.props.img เพื่อแสดงค่าของ img
-    // ใช้ this.props.studentID เพื่อแสดงค่าของ studentID
-    // ใช้ this.props.content เพื่อแสดงค่าของ content
+    // this.props is used to access the properties of the component
   }
 }
-
 
 class Main extends Component {
 
@@ -81,10 +105,8 @@ class Main extends Component {
           Aekarin Ongart Aekarin Ongart Aekarin Ongart Aekarin Ongart Aekarin Ongart Aekarin Ongart Aekarin Ongart
           Aekarin Ongart Aekarin Ongart Aekarin Ongart Aekarin Ongart" />
       </div>
-      
     )
   }
 }
-
 
 export default Main; // แสดงผลในหน้าเว็บ โดยใช้ Component Main
