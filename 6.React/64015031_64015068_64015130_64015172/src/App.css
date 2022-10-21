@@ -1,0 +1,75 @@
+.header-member {
+    color: rgb(255, 205, 2);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+body {
+    background-color: rgb(106, 104, 106);
+}
+
+img {
+    width: 100;
+    height: 225px;
+    position: absolute;
+    right: 50;
+}
+
+.vote {
+    display: flex;
+    border-radius: 10px;
+    border: solid rgb(55, 54, 38);
+    height: 50px;
+    width: 80px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: rgb(120, 227, 0);
+    color: rgb(154, 56, 248);
+    align-items: center;
+    justify-content: center;
+}
+
+.bgblog {
+    height: 400px;
+    width: 800px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(253, 235, 215);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    position: relative;
+    border-style: solid;
+    border-width: 3px;
+}
+
+.flex-content {
+    height: 220px;
+    width: 590px;
+    display: flex;
+    flex-wrap: wrap;
+    /* ให้ข้อความขึ้นบรรทัดใหม่ */
+}
+
+.bgblog>img {
+    right: 30px;
+    top: 30px;
+}
+
+.buttongroup {
+    display: flex;
+    justify-content: center;
+}
+
+.flexbutton {
+    display: flex;
+}
+
+.buttons {
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    height: 40px;
+    width: 120px;
+    margin-top: 10px;
+}
