@@ -7,12 +7,14 @@ body {
 img {
     max-width: 100%;
     height: auto;
+    width: auto;
 }
 
 ul {
     margin: 0;
     padding: 0;
     display: flex;
+    z-index:3;
 }
 
 li {
@@ -42,6 +44,7 @@ ul li ul:hover {
 }
 
 .profile {
+    top: auto;
     position: fixed;
     right: 5px;
     height: 4.5rem;
