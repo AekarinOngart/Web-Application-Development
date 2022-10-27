@@ -118,3 +118,505 @@ p {
     margin-bottom: 3%;
     height: 15%;
 }
+
+
+/* 
+  #Device = Desktops Editor
+  #Screen = 1368px to higher resolution desktops
+*/
+
+@media (min-width: 1368px) {
+    .popup2 img {
+        width: 35%;
+    }
+    .popup1,
+    .popup2 {
+        background-color: #ffffff;
+        width: 90%;
+        height: 85%;
+        padding: 30px 40px;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 55%;
+        border-radius: 10px;
+        border: 10px solid #7F664F;
+        font-family: "Poppins", sans-serif;
+        display: none;
+        text-align: center;
+    }
+}
+
+
+/* 
+  #Device = Desktops
+  #Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) and (max-width: 1367px) {
+    .popup2 img {
+        width: 30%;
+    }
+    .popup1,
+    .popup2 {
+        background-color: #ffffff;
+        width: 90%;
+        height: 80%;
+        padding: 10px 20px;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 55%;
+        border-radius: 10px;
+        border: 5px solid #7F664F;
+        font-family: "Poppins", sans-serif;
+        display: none;
+        text-align: center;
+    }
+    .shop-name {
+        text-align: left;
+        color: black;
+        font-weight: bold;
+        font-size: 14px;
+    }
+    .item-img {
+        text-align: center;
+        height: 75px;
+        width: 75px;
+        position: relative;
+        border: 3px solid #7F664F;
+        border-radius: 9px;
+    }
+    p {
+        font-size: 12px;
+    }
+    .btn-popup-pay,
+    .btn-popup-cancel,
+    .btn-popup-success {
+        font-size: 14px;
+        border: 5px solid #7F664F;
+        border-radius: 9px;
+    }
+    .btn-popup-pay,
+    .btn-popup-cancel,
+    .btn-popup-success {
+        width: 120px;
+        height: 40px;
+        color: #FFFFFF;
+        font-weight: bold;
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+    .qr {
+        margin-top: 1%;
+        margin-bottom: 1%;
+        height: 15%;
+    }
+}
+
+
+/* 
+  #Device = Laptops, Desktops
+  #Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .popup2 img {
+        width: 30%;
+    }
+    .popup1,
+    .popup2 {
+        background-color: #ffffff;
+        width: 90%;
+        height: 80%;
+        padding: 10px 20px;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 55%;
+        border-radius: 10px;
+        border: 5px solid #7F664F;
+        font-family: "Poppins", sans-serif;
+        display: none;
+        text-align: center;
+    }
+    .shop-name {
+        text-align: left;
+        color: black;
+        font-weight: bold;
+        font-size: 14px;
+    }
+    .item-img {
+        text-align: center;
+        height: 75px;
+        width: 75px;
+        position: relative;
+        border: 3px solid #7F664F;
+        border-radius: 9px;
+    }
+    p {
+        font-size: 12px;
+    }
+    .btn-popup-pay,
+    .btn-popup-cancel,
+    .btn-popup-success {
+        font-size: 14px;
+        border: 5px solid #7F664F;
+        border-radius: 9px;
+    }
+    .btn-popup-pay,
+    .btn-popup-cancel,
+    .btn-popup-success {
+        width: 120px;
+        height: 40px;
+        color: #FFFFFF;
+        font-weight: bold;
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+    .qr {
+        margin-top: 1%;
+        margin-bottom: 1%;
+        height: 15%;
+    }
+}
+
+
+/* 
+  #Device = Laptops, Desktops (older)
+*/
+
+@media (width: 1600px) {
+    .popup2 img {
+        width: 30%;
+    }
+    .popup1,
+    .popup2 {
+        background-color: #ffffff;
+        width: 90%;
+        height: 80%;
+        padding: 10px 20px;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 55%;
+        border-radius: 10px;
+        border: 5px solid #7F664F;
+        font-family: "Poppins", sans-serif;
+        display: none;
+        text-align: center;
+    }
+    .shop-name {
+        text-align: left;
+        color: black;
+        font-weight: bold;
+        font-size: 14px;
+    }
+    .item-img {
+        text-align: center;
+        height: 75px;
+        width: 75px;
+        position: relative;
+        border: 3px solid #7F664F;
+        border-radius: 9px;
+    }
+    p {
+        font-size: 12px;
+    }
+    .btn-popup-pay,
+    .btn-popup-cancel,
+    .btn-popup-success {
+        font-size: 14px;
+        border: 5px solid #7F664F;
+        border-radius: 9px;
+    }
+    .btn-popup-pay,
+    .btn-popup-cancel,
+    .btn-popup-success {
+        width: 120px;
+        height: 40px;
+        color: #FFFFFF;
+        font-weight: bold;
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+    .qr {
+        margin-top: 1%;
+        margin-bottom: 1%;
+        height: 15%;
+    }
+}
+
+
+/* 
+  #Device = Tablets, Ipads (portrait)
+  #Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .popup2 img {
+        width: 70%;
+    }
+    .popup1,
+    .popup2 {
+        background-color: #ffffff;
+        width: 90%;
+        height: 80%;
+        padding: 50px 20px;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 55%;
+        border-radius: 10px;
+        border: 5px solid #7F664F;
+        font-family: "Poppins", sans-serif;
+        display: none;
+        text-align: center;
+    }
+    .shop-name {
+        text-align: left;
+        color: black;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .item-img {
+        text-align: center;
+        height: 75px;
+        width: 75px;
+        position: relative;
+        border: 3px solid #7F664F;
+        border-radius: 9px;
+    }
+    p {
+        font-size: 20px;
+        margin-top: 3%;
+    }
+    .btn-popup-pay,
+    .btn-popup-cancel,
+    .btn-popup-success {
+        font-size: 20px;
+        border: 5px solid #7F664F;
+        border-radius: 9px;
+    }
+    .btn-popup-pay,
+    .btn-popup-cancel,
+    .btn-popup-success {
+        width: 120px;
+        height: 40px;
+        color: #FFFFFF;
+        font-weight: bold;
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+    .qr {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        height: 15%;
+    }
+}
+
+
+/* 
+  #Device = Tablets, Ipads (landscape)
+  #Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .popup2 img {
+        width: 50%;
+    }
+    .popup1,
+    .popup2 {
+        background-color: #ffffff;
+        width: 90%;
+        height: 80%;
+        padding: 20px 20px;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 55%;
+        border-radius: 10px;
+        border: 5px solid #7F664F;
+        font-family: "Poppins", sans-serif;
+        display: none;
+        text-align: center;
+    }
+    .shop-name {
+        text-align: left;
+        color: black;
+        font-weight: bold;
+        font-size: 14px;
+    }
+    .item-img {
+        text-align: center;
+        height: 75px;
+        width: 75px;
+        position: relative;
+        border: 3px solid #7F664F;
+        border-radius: 9px;
+    }
+    p {
+        font-size: 12px;
+    }
+    .btn-popup-pay,
+    .btn-popup-cancel,
+    .btn-popup-success {
+        font-size: 14px;
+        border: 5px solid #7F664F;
+        border-radius: 9px;
+    }
+    .btn-popup-pay,
+    .btn-popup-cancel,
+    .btn-popup-success {
+        width: 120px;
+        height: 40px;
+        color: #FFFFFF;
+        font-weight: bold;
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+    .qr {
+        margin-top: 4%;
+        margin-bottom: 4%;
+        height: 15%;
+    }
+}
+
+
+/* 
+  #Device = Low Resolution Tablets, Mobiles
+  #Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .popup2 img {
+        width: 70%;
+    }
+    .popup1,
+    .popup2 {
+        background-color: #ffffff;
+        width: 90%;
+        height: 80%;
+        padding: 50px 20px;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 55%;
+        border-radius: 10px;
+        border: 5px solid #7F664F;
+        font-family: "Poppins", sans-serif;
+        display: none;
+        text-align: center;
+    }
+    .shop-name {
+        text-align: left;
+        color: black;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .item-img {
+        text-align: center;
+        height: 75px;
+        width: 75px;
+        position: relative;
+        border: 3px solid #7F664F;
+        border-radius: 9px;
+    }
+    p {
+        font-size: 20px;
+        margin-top: 3%;
+    }
+    .btn-popup-pay,
+    .btn-popup-cancel,
+    .btn-popup-success {
+        font-size: 20px;
+        border: 5px solid #7F664F;
+        border-radius: 9px;
+    }
+    .btn-popup-pay,
+    .btn-popup-cancel,
+    .btn-popup-success {
+        width: 120px;
+        height: 40px;
+        color: #FFFFFF;
+        font-weight: bold;
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+    .qr {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        height: 15%;
+    }
+}
+
+
+/* 
+  #Device = Most of the Smartphones Mobiles (Portrait)
+  #Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .popup2 img {
+        width: 50%;
+    }
+    .popup1,
+    .popup2 {
+        background-color: #ffffff;
+        width: 90%;
+        height: 80%;
+        padding: 20px 20px;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 55%;
+        border-radius: 10px;
+        border: 5px solid #7F664F;
+        font-family: "Poppins", sans-serif;
+        display: none;
+        text-align: center;
+    }
+    .shop-name {
+        text-align: left;
+        color: black;
+        font-weight: bold;
+        font-size: 12px;
+    }
+    .item-img {
+        text-align: center;
+        height: 75px;
+        width: 75px;
+        position: relative;
+        border: 3px solid #7F664F;
+        border-radius: 9px;
+    }
+    p {
+        font-size: 10px;
+    }
+    .btn-popup-pay,
+    .btn-popup-cancel,
+    .btn-popup-success {
+        font-size: 10px;
+        border: 5px solid #7F664F;
+        border-radius: 9px;
+    }
+    .btn-popup-pay,
+    .btn-popup-cancel,
+    .btn-popup-success {
+        width: 90px;
+        height: 35px;
+        color: #FFFFFF;
+        font-weight: bold;
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+    .qr {
+        margin-top: 1%;
+        margin-bottom: 1%;
+        height: 15%;
+    }
+    #address {
+        width: 80%;
+        padding: 5px 5px;
+    }
+}

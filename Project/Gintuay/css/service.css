@@ -18,7 +18,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 85%;
+    height: 70%;
 }
 
 .box {
@@ -34,24 +34,18 @@ body {
 
 
 /* 
-#Device = Low Resolution Tablets, Mobiles (Landscape)
-#Screen = B/w 481px to 767px
+  #Device = Desktops
+  #Screen = 1281px to higher resolution desktops
 */
 
-@media (min-width: 481px) and (max-width: 767px) {
-    service-box {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-    }
+@media (min-width: 1281px) {
     .box {
-        padding: 1% 10%;
-        font-size: 150%;
+        padding: 2% 9%;
+        font-size: 300%;
         color: #FFBD59;
         background-color: white;
         border-radius: 10px;
-        border: 4px solid #7F664F;
+        border: 10px solid #7F664F;
         margin-left: 5%;
         margin-right: 5%;
     }
@@ -59,25 +53,121 @@ body {
 
 
 /* 
-#Device = Most of the Smartphones Mobiles (Portrait)
-#Screen = B/w 320px to 479px
+  #Device = Laptops, Desktops
+  #Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .box {
+        padding: 2% 9%;
+        font-size: 300%;
+        color: #FFBD59;
+        background-color: white;
+        border-radius: 10px;
+        border: 10px solid #7F664F;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+
+/* 
+  #Device = Laptops, Desktops (older)
+*/
+
+@media (width: 1600px) {
+    .box {
+        padding: 2% 9%;
+        font-size: 300%;
+        color: #FFBD59;
+        background-color: white;
+        border-radius: 10px;
+        border: 10px solid #7F664F;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+
+/* 
+  #Device = Tablets, Ipads (portrait)
+  #Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .box {
+        padding: 2% 9%;
+        font-size: 300%;
+        color: #FFBD59;
+        background-color: white;
+        border-radius: 10px;
+        border: 10px solid #7F664F;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+
+/* 
+  #Device = Tablets, Ipads (landscape)
+  #Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .box {
+        padding: 2% 9%;
+        font-size: 300%;
+        color: #FFBD59;
+        background-color: white;
+        border-radius: 10px;
+        border: 10px solid #7F664F;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+
+/* 
+  #Device = Low Resolution Tablets, Mobiles (Landscape)
+  #Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .service-box {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .box {
+        margin-top: 10%;
+        padding: 1% 13%;
+        font-size: 200%;
+        color: #FFBD59;
+        background-color: white;
+        border-radius: 10px;
+        border: 4px solid #7F664F;
+    }
+}
+
+
+/* 
+  #Device = Most of the Smartphones Mobiles (Portrait)
+  #Screen = B/w 320px to 479px
 */
 
 @media (min-width: 320px) and (max-width: 480px) {
     .service-box {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 85%;
+        flex-direction: column;
+        flex-wrap: wrap;
     }
     .box {
+        margin-top: 10%;
         padding: 1% 10%;
-        font-size: 100%;
+        font-size: 150%;
         color: #FFBD59;
         background-color: white;
         border-radius: 10px;
         border: 4px solid #7F664F;
-        margin-left: 5%;
-        margin-right: 5%;
     }
 }

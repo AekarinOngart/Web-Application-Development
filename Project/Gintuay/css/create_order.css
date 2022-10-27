@@ -65,6 +65,10 @@
     font-weight: bold;
 }
 
+.flex-container {
+    height: 80%;
+}
+
 .top {
     display: flex;
     height: 80%;
@@ -85,8 +89,8 @@
 
 .upload-img p {
     display: flex;
-    justify-content: center; 
-    align-items: flex-end;  
+    justify-content: center;
+    align-items: flex-end;
     height: 70%;
     color: black;
 }
@@ -107,7 +111,6 @@
 
 .left-right {
     width: 20%;
-
 }
 
 .right label {
@@ -138,7 +141,7 @@ input[type="text"] {
 
 input[type="text1"] {
     width: 80%;
-    height: 50%;
+    height: 50px;
     border: 5px solid #7F664F;
     border-radius: 9px;
 
@@ -147,10 +150,178 @@ input[type="text1"] {
 .time {
     margin-top: 1%;
 }
-input[type="text2"]{
+
+input[type="text2"] {
     border: 5px solid #7F664F;
     border-radius: 9px;
     width: 2%;
     margin-left: 1%;
 
+}
+
+@media screen and (max-width: 1226px) {
+    .left-right {
+        width: 30%;
+    }
+
+}
+
+@media screen and (max-width: 870px) {
+    .left {
+        width: 50%;
+        height: 100%;
+    }
+
+    .upload-img {
+
+        width: 50%;
+        height: 100%;
+        border: 5px solid #7F664F;
+        border-radius: 9px;
+        margin-top: 5%;
+        margin-left: 25%;
+    }
+
+    .top {
+        display: grid;
+        justify-items: center;
+        height: 80%;
+    }
+
+    input[type="text"] {
+        width: 110%;
+        height: 20%;
+        border: 5px solid #7F664F;
+        border-radius: 9px;
+        margin-left: 5%;
+    }
+
+    input[type="text1"] {
+        width: 110%;
+        height: 50px;
+        border: 5px solid #7F664F;
+        border-radius: 9px;
+
+    }
+
+}
+
+@media screen and (max-width: 817px) {
+    .left {
+        width: 50%;
+        height: 170%;
+    }
+
+    .upload-img {
+        width: 50%;
+        height: 50%;
+        border: 5px solid #7F664F;
+        border-radius: 9px;
+        margin-top: 10%;
+        margin-left: 25%;
+    }
+
+    .top {
+        display: grid;
+        justify-items: center;
+        height: 80%;
+    }
+
+    input[type="text"] {
+        width: 110%;
+        height: 20%;
+        border: 5px solid #7F664F;
+        border-radius: 9px;
+        margin-left: 5%;
+    }
+
+    .left-right {
+        width: 40%;
+    }
+
+    .right {
+        display: grid;
+        margin-top: 5%;
+        left: 40%;
+        top: 10%;
+        width: 60%;
+        height: 30%;
+
+
+    }
+}
+
+@media screen and (max-width:652px) {
+    .left-right {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .left-right {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:559px) {
+    .left-right {
+        width: 50%;
+    }
+
+    .bottomcontainer {
+        font-size: 150%;
+    }
+}
+
+@media screen and (max-width:447px) {
+    .left-right {
+        width: 55%;
+    }
+
+    .bottomcontainer {
+        font-size: 150%;
+    }
+}
+
+@media screen and (max-width:420px) {
+    .bottomcontainer {
+        left: 3%;
+
+    }
+
+    .left-right {
+        width: 60%;
+    }
+
+    .bottomcontainer {
+        font-size: 150%;
+    }
+}
+
+@media screen and (max-width:340px) {
+    .bottomcontainer {
+        left: 3%;
+
+    }
+
+    .left-right {
+        width: 60%;
+    }
+
+    .bottomcontainer {
+        font-size: 120%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .bottomcontainer {
+        left: 3%;
+
+    }
+
+    .main {
+        font-size: 200%;
+
+    }
 }

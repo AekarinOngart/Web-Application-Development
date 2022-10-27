@@ -46,14 +46,16 @@
     </nav>
     <!--End-Navbar-->
     <div class="main">ชำระค่าบริการ</div>
+    <form action="">
     <div class="bottomcontainer">
+        <div class="flex-container">
         <div class="item"><img src="./images/Kraprao.jfif" alt="logo" class="item-img"><br>
             <div class="name-item">ปูตีกัมมาสาลา <td class="price">35฿</td>
             </div>
             <div class="shop-name">ร้าน : เจ้เล็กข้าวแกงตามสั่ง</div>
-            <div class="more-detail">รายละเอียด
-                <div class="box">
-                    <div class="text">โคตรอร่อยเลยครับร้นนี้ใครสนใจอยากสั่งมาตำเลอ</div>
+            <div class="more-detail">
+                <label for="detail">รายละเอียด</label><br>
+                    <textarea type="text" id="detail" name="detail" class="box"></textarea>
                 </div>
             </div>
             <div class="check-box">
@@ -62,9 +64,9 @@
                 <label>
                     <input type="checkbox" class="radio" value="1" name="fooby[1][]" /> ไข่ดาว +5 บาท</label>
             </div>
-            <div class="note">หมายเหตุ
-                <div class="box">
-                    <div class="text">เอามะนาวช้อนและพริกน้ำปลาด้วย</div>
+            <div class="note">
+                <label for="notes">หมายเหตุ</label><br>
+                    <textarea type="text" id="notes" name="notes" class="box"></textarea>
                 </div>
             </div>
             <div class="post-cancel">
@@ -72,7 +74,7 @@
                 <button class="cancel-button">Cancel</button>
             </div>
         </div>
-    </div>
+</form>
 </body>
 
 </html>
