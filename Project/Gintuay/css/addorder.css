@@ -14,8 +14,8 @@
     border-radius: 9px;
     background: #f9f5eb;
     color: #FFBD59;
-    height: 86.7vh;
-    width: 86.1vw;
+    height: 100%;
+    width: 86%;
     font-size: 30px;
 
 }
@@ -27,8 +27,8 @@
 
 .item-img {
     text-align: center;
-    width: 131px;
-    height: 100px;
+    min-width: 200px;
+    height: 140px;
     position: relative;
     border: 0.274300071787509vw solid #7F664F;
     border-radius: 9px;
@@ -185,10 +185,11 @@
 
     .item-img {
         text-align: center;
-        width: 131px;
-        height: 100px;
+        width: 20vw;
+        min-width: 200px;
+        height: 140px;
         position: relative;
-        border: 0.274300071787509vw solid #7F664F;
+        border: 2px solid #7F664F;
         border-radius: 9px;
     }
 

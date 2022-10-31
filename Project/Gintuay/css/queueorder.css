@@ -71,10 +71,12 @@
 
 .sum {
 
-    margin: 1% 3%;
+    margin: -1% 3%;
     display: flex;
     width: 93%;
     justify-content: flex-end;
+    font-size: 150%;
+    font-weight: bold;
 
 }
 
