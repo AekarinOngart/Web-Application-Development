@@ -1,6 +1,6 @@
 # How to run
 
-yarn install
+yarn install\
 yarn start
 
 # Getting Started with Create React App
