@@ -10,3 +10,7 @@ start 2/11/2022 - current
 ## เทส Login
 ### ใช้ USERNAME : admin หรือ admin1234
 ### ใช้ PASSWORD : admin1234
+
+## ฟังชั่นที่ทำได้ในปัจจุบัน
+#### Login
+#### Logout
