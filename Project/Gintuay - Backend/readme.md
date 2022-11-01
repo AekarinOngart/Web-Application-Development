@@ -12,5 +12,6 @@ start 2/11/2022 - current
 ### ใช้ PASSWORD : admin1234
 
 ## ฟังชั่นที่ทำได้ในปัจจุบัน
+#### session time out
 #### Login
 #### Logout
