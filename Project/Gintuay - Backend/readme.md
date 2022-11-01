@@ -1,3 +1,6 @@
+# Backend Beta Test
+start 2/11/2022 - current
+
 ## วิธีทดสอบ
 ###  0.เปิด XAMPP
 ###  1. ในโฟลเดอร์ Database ให้เอาไฟล์ในนั้นไปไว้ใน phpMyadmin ก่อน
