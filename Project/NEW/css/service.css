@@ -1,0 +1,73 @@
+@import 'https://fonts.googleapis.com/css?family=Kanit|Prompt';
+body {
+    background-color: #FFBD59;
+    font-family: 'Kanit', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    margin-bottom: -5%;
+}
+
+.container-table {
+    position: absolute;
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.container-center {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 10%;
+}
+
+button {
+    font-size: 96px;
+    padding: 125px;
+    border-radius: 9px;
+    border: 8px solid #7F664F;
+    color: #FFBD59;
+}
+
+@media only screen and (max-width: 852px) {
+    .container {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    .buy button {
+        font-size: 72px;
+        padding: 90px;
+    }
+    .sell button {
+        font-size: 72px;
+        padding: 95px;
+    }
+}
+
+@media only screen and (max-width: 555px) {
+    .container {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    .buy button {
+        font-size: 32px;
+        padding: 80px;
+    }
+    .sell button {
+        font-size: 32px;
+        padding: 84px;
+    }
+    .navbar {
+        margin-bottom: -15%;
+    }
+}

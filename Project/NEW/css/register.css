@@ -1,0 +1,98 @@
+@import 'https://fonts.googleapis.com/css?family=Kanit|Prompt';
+body {
+    background-color: #FFBD59;
+    font-family: 'Kanit', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container-table {
+    position: absolute;
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.container-center {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    row-gap: 30px;
+}
+
+.textbox-input {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+}
+
+.textbox-input input {
+    width: 450px;
+    height: 45px;
+    border-radius: 6px;
+    border: 4px solid #7F664F;
+    padding-left: 10px;
+}
+
+img {
+    height: 25%;
+}
+
+.qrcode>input {
+    background-color: white;
+    border-radius: 6px;
+    border: 4px solid #7F664F;
+    padding: 15px 30px;
+}
+
+.btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn input {
+    color: white;
+    width: 100px;
+    border-radius: 6px;
+    border: 4px solid #7F664F;
+}
+
+.btn-cancel>input {
+    background-color: #C51F1B;
+    height: 45px;
+    width: 150px;
+}
+
+.btn-register>input {
+    background-color: #38B6FF;
+    height: 45px;
+    width: 150px;
+}
+
+::placeholder {
+    color: #FFBD59;
+    font-weight: bolder;
+}
+
+@media only screen and (max-width: 555px) {
+    .textbox-input input {
+        width: 70%;
+    }
+    .qrcode>input {
+        width: 40%;
+    }
+    img {
+        height: 150px;
+    }
+    .btn input {
+        width: 120px;
+    }
+}
