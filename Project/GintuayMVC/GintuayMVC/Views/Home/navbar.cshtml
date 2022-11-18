@@ -1,0 +1,87 @@
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <title>Document</title>
+    <link rel="stylesheet" href="~/css/navbar.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>
+                <img src="~/images/logo.png" alt="logo" id="logo">
+            </li>
+            <li>
+                <img src="~/images/notification.png" class="notification" onclick="show1('menu1')">
+                <ul id="menu">
+                    <li class="sub-item">
+                        <span class="material-icons-outlined"> manage_accounts </span>
+                        แก้ไขโปรไฟล์
+                    </li>
+                    <li class="sub-item">
+                        <span class="material-icons-outlined"> format_list_bulleted </span>
+                        ออเดอร์สินค้า
+                    </li>
+                    <li class="sub-item">
+                        <span class="material-icons-outlined"> logout </span>
+                        ออกจากระบบ
+                    </li>
+                </ul>
+                <img src="~/images/profile.png" class="profile" onclick="show('menu')">
+                <ul id="menu1">
+
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div class="content" onclick="showoff(['menu','menu1'])"></div>
+
+    <script>
+        function showoff(id) {
+            for (i = 1; i <= id.length; i++) {
+                var x = document.getElementById(id[i - 1]);
+                console.log(x.style.display)
+                if (x.style.display == "block") {
+                    x.style.display = "none";
+                }
+            }
+
+        }
+        function show(id) {
+            showoff(['menu', 'menu1'])
+            var x = document.getElementById(id);
+            console.log(x.style.display)
+            if (x.style.display == "none") {
+                x.style.display = "block";
+            } else if (x.style.display == "") {
+                x.style.display = "block"
+            } else {
+                x.style.display = "none"
+            }
+        }
+        function show1(id) {
+            showoff(['menu', 'menu1'])
+            var x = document.getElementById(id);
+            console.log(x.style.display)
+            if (x.style.display == "none") {
+                x.style.display = "block";
+            } else if (x.style.display == "") {
+                x.style.display = "block"
+            } else {
+                x.style.display = "none"
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

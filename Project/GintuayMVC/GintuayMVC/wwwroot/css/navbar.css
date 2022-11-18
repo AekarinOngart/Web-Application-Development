@@ -1,0 +1,106 @@
+@import 'https://fonts.googleapis.com/css?family=Kanit|Prompt';
+
+body {
+    font-family: 'Kanit', sans-serif;
+    background-color: #FFBD59;
+}
+
+.content {
+    height: 500px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+}
+
+
+ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    z-index: 3;
+    justify-content: space-between;
+
+}
+
+li {
+    list-style-type: none;
+    position: relative;
+    padding: 0.625rem 0 0.5rem;
+    display: flex;
+}
+
+li ul {
+    flex-direction: column;
+    position: fixed;
+    background-color: white;
+    width: 20rem;
+    right: 5px;
+    top: 6rem;
+    border-radius: 0.325rem;
+    box-shadow: 0px 0px 100px rgba(20, 18, 18, 0.25);
+    padding: 1rem 0rem;
+    display: none;
+}
+
+
+.profile {
+    top: auto;
+    right: 40px;
+    height: 4.5rem;
+    width: 100%;
+    cursor: pointer;
+    margin-right: 20px;
+
+}
+
+
+.sub-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.725rem;
+    cursor: pointer;
+    padding: 1.1rem 1.5rem;
+    color: #ff9800;
+}
+
+.sub-item:hover {
+    background-color: rgba(232, 232, 232, 0.4);
+}
+
+.sub-item:hover .material-icons-outlined {
+    color: black;
+    transform: scale(1.08) translateY(-2px);
+    cursor: pointer;
+}
+
+.sub-item:hover p {
+    color: #000;
+    cursor: pointer;
+}
+
+.sub-item p {
+    font-size: 1.1rem;
+    color: #ff9800;
+    font-weight: 500;
+    margin: 0.4rem 0;
+    flex: 1;
+}
+
+#logo {
+    width: 30%;
+    margin-left: 10%;
+}
+
+.notification {
+    top: auto;
+
+    right: 140px;
+    height: 4.5rem;
+    width: auto;
+    cursor: pointer;
+    margin-right: 20px;
+}

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\64015172\\Desktop\\Gintuay\\Gintuay\\Gintuay.csproj": {}
+    "C:\\Users\\64015172\\Desktop\\WEB-APPLICATION-DEVELOPMENT\\Project\\Gintuay\\Gintuay - Backend\\Gintuay\\Gintuay.csproj": {}
   },
   "projects": {
-    "C:\\Users\\64015172\\Desktop\\Gintuay\\Gintuay\\Gintuay.csproj": {
+    "C:\\Users\\64015172\\Desktop\\WEB-APPLICATION-DEVELOPMENT\\Project\\Gintuay\\Gintuay - Backend\\Gintuay\\Gintuay.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\64015172\\Desktop\\Gintuay\\Gintuay\\Gintuay.csproj",
+        "projectUniqueName": "C:\\Users\\64015172\\Desktop\\WEB-APPLICATION-DEVELOPMENT\\Project\\Gintuay\\Gintuay - Backend\\Gintuay\\Gintuay.csproj",
         "projectName": "Gintuay",
-        "projectPath": "C:\\Users\\64015172\\Desktop\\Gintuay\\Gintuay\\Gintuay.csproj",
+        "projectPath": "C:\\Users\\64015172\\Desktop\\WEB-APPLICATION-DEVELOPMENT\\Project\\Gintuay\\Gintuay - Backend\\Gintuay\\Gintuay.csproj",
         "packagesPath": "C:\\Users\\64015172\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\64015172\\Desktop\\Gintuay\\Gintuay\\obj\\",
+        "outputPath": "C:\\Users\\64015172\\Desktop\\WEB-APPLICATION-DEVELOPMENT\\Project\\Gintuay\\Gintuay - Backend\\Gintuay\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

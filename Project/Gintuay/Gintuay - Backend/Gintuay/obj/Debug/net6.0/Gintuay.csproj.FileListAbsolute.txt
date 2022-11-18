@@ -84,3 +84,46 @@ C:\Users\64015172\Desktop\Gintuay\Gintuay\obj\Debug\net6.0\refint\Gintuay.dll
 C:\Users\64015172\Desktop\Gintuay\Gintuay\obj\Debug\net6.0\Gintuay.pdb
 C:\Users\64015172\Desktop\Gintuay\Gintuay\obj\Debug\net6.0\Gintuay.genruntimeconfig.cache
 C:\Users\64015172\Desktop\Gintuay\Gintuay\obj\Debug\net6.0\ref\Gintuay.dll
+C:\Users\64015172\Desktop\WEB-APPLICATION-DEVELOPMENT\Project\Gintuay\Gintuay - Backend\Gintuay\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\64015172\Desktop\WEB-APPLICATION-DEVELOPMENT\Project\Gintuay\Gintuay - Backend\Gintuay\bin\Debug\net6.0\appsettings.json
+C:\Users\64015172\Desktop\WEB-APPLICATION-DEVELOPMENT\Project\Gintuay\Gintuay - Backend\Gintuay\bin\Debug\net6.0\Gintuay.exe
+C:\Users\64015172\Desktop\WEB-APPLICATION-DEVELOPMENT\Project\Gintuay\Gintuay - Backend\Gintuay\bin\Debug\net6.0\Gintuay.deps.json
+C:\Users\64015172\Desktop\WEB-APPLICATION-DEVELOPMENT\Project\Gintuay\Gintuay - Backend\Gintuay\bin\Debug\net6.0\Gintuay.runtimeconfig.json
+C:\Users\64015172\Desktop\WEB-APPLICATION-DEVELOPMENT\Project\Gintuay\Gintuay - Backend\Gintuay\bin\Debug\net6.0\Gintuay.dll
+C:\Users\64015172\Desktop\WEB-APPLICATION-DEVELOPMENT\Project\Gintuay\Gintuay - Backend\Gintuay\bin\Debug\net6.0\Gintuay.pdb
+C:\Users\64015172\Desktop\WEB-APPLICATION-DEVELOPMENT\Project\Gintuay\Gintuay - Backend\Gintuay\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\64015172\Desktop\WEB-APPLICATION-DEVELOPMENT\Project\Gintuay\Gintuay - Backend\Gintuay\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\64015172\Desktop\WEB-APPLICATION-DEVELOPMENT\Project\Gintuay\Gintuay - Backend\Gintuay\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\64015172\Desktop\WEB-APPLICATION-DEVELOPMENT\Project\Gintuay\Gintuay - Backend\Gintuay\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\64015172\Desktop\WEB-APPLICATION-DEVELOPMENT\Project\Gintuay\Gintuay - Backend\Gintuay\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\64015172\Desktop\WEB-APPLICATION-DEVELOPMENT\Project\Gintuay\Gintuay - Backend\Gintuay\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\64015172\Desktop\WEB-APPLICATION-DEVELOPMENT\Project\Gintuay\Gintuay - Backend\Gintuay\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\64015172\Desktop\WEB-APPLICATION-DEVELOPMENT\Project\Gintuay\Gintuay - Backend\Gintuay\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+C:\Users\64015172\Desktop\WEB-APPLICATION-DEVELOPMENT\Project\Gintuay\Gintuay - Backend\Gintuay\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\64015172\Desktop\WEB-APPLICATION-DEVELOPMENT\Project\Gintuay\Gintuay - Backend\Gintuay\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+C:\Users\64015172\Desktop\WEB-APPLICATION-DEVELOPMENT\Project\Gintuay\Gintuay - Backend\Gintuay\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+C:\Users\64015172\Desktop\WEB-APPLICATION-DEVELOPMENT\Project\Gintuay\Gintuay - Backend\Gintuay\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\64015172\Desktop\WEB-APPLICATION-DEVELOPMENT\Project\Gintuay\Gintuay - Backend\Gintuay\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\64015172\Desktop\WEB-APPLICATION-DEVELOPMENT\Project\Gintuay\Gintuay - Backend\Gintuay\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\64015172\Desktop\WEB-APPLICATION-DEVELOPMENT\Project\Gintuay\Gintuay - Backend\Gintuay\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\64015172\Desktop\WEB-APPLICATION-DEVELOPMENT\Project\Gintuay\Gintuay - Backend\Gintuay\obj\Debug\net6.0\Gintuay.csproj.AssemblyReference.cache
+C:\Users\64015172\Desktop\WEB-APPLICATION-DEVELOPMENT\Project\Gintuay\Gintuay - Backend\Gintuay\obj\Debug\net6.0\Gintuay.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\64015172\Desktop\WEB-APPLICATION-DEVELOPMENT\Project\Gintuay\Gintuay - Backend\Gintuay\obj\Debug\net6.0\Gintuay.AssemblyInfoInputs.cache
+C:\Users\64015172\Desktop\WEB-APPLICATION-DEVELOPMENT\Project\Gintuay\Gintuay - Backend\Gintuay\obj\Debug\net6.0\Gintuay.AssemblyInfo.cs
+C:\Users\64015172\Desktop\WEB-APPLICATION-DEVELOPMENT\Project\Gintuay\Gintuay - Backend\Gintuay\obj\Debug\net6.0\Gintuay.csproj.CoreCompileInputs.cache
+C:\Users\64015172\Desktop\WEB-APPLICATION-DEVELOPMENT\Project\Gintuay\Gintuay - Backend\Gintuay\obj\Debug\net6.0\Gintuay.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\64015172\Desktop\WEB-APPLICATION-DEVELOPMENT\Project\Gintuay\Gintuay - Backend\Gintuay\obj\Debug\net6.0\Gintuay.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\64015172\Desktop\WEB-APPLICATION-DEVELOPMENT\Project\Gintuay\Gintuay - Backend\Gintuay\obj\Debug\net6.0\staticwebassets\msbuild.Gintuay.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\64015172\Desktop\WEB-APPLICATION-DEVELOPMENT\Project\Gintuay\Gintuay - Backend\Gintuay\obj\Debug\net6.0\staticwebassets\msbuild.build.Gintuay.props
+C:\Users\64015172\Desktop\WEB-APPLICATION-DEVELOPMENT\Project\Gintuay\Gintuay - Backend\Gintuay\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Gintuay.props
+C:\Users\64015172\Desktop\WEB-APPLICATION-DEVELOPMENT\Project\Gintuay\Gintuay - Backend\Gintuay\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.Gintuay.props
+C:\Users\64015172\Desktop\WEB-APPLICATION-DEVELOPMENT\Project\Gintuay\Gintuay - Backend\Gintuay\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\64015172\Desktop\WEB-APPLICATION-DEVELOPMENT\Project\Gintuay\Gintuay - Backend\Gintuay\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\64015172\Desktop\WEB-APPLICATION-DEVELOPMENT\Project\Gintuay\Gintuay - Backend\Gintuay\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\64015172\Desktop\WEB-APPLICATION-DEVELOPMENT\Project\Gintuay\Gintuay - Backend\Gintuay\obj\Debug\net6.0\scopedcss\bundle\Gintuay.styles.css
+C:\Users\64015172\Desktop\WEB-APPLICATION-DEVELOPMENT\Project\Gintuay\Gintuay - Backend\Gintuay\obj\Debug\net6.0\Gintuay.csproj.CopyComplete
+C:\Users\64015172\Desktop\WEB-APPLICATION-DEVELOPMENT\Project\Gintuay\Gintuay - Backend\Gintuay\obj\Debug\net6.0\Gintuay.dll
+C:\Users\64015172\Desktop\WEB-APPLICATION-DEVELOPMENT\Project\Gintuay\Gintuay - Backend\Gintuay\obj\Debug\net6.0\refint\Gintuay.dll
+C:\Users\64015172\Desktop\WEB-APPLICATION-DEVELOPMENT\Project\Gintuay\Gintuay - Backend\Gintuay\obj\Debug\net6.0\Gintuay.pdb
+C:\Users\64015172\Desktop\WEB-APPLICATION-DEVELOPMENT\Project\Gintuay\Gintuay - Backend\Gintuay\obj\Debug\net6.0\Gintuay.genruntimeconfig.cache
+C:\Users\64015172\Desktop\WEB-APPLICATION-DEVELOPMENT\Project\Gintuay\Gintuay - Backend\Gintuay\obj\Debug\net6.0\ref\Gintuay.dll

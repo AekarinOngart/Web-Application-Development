@@ -1,0 +1,152 @@
+/* .container{
+    margin-top: -10%;
+} */
+
+
+.container-table {
+    z-index: -1;
+    margin-top: -8%;
+    position: absolute;
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.container-center {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.container {
+    background-color: whitesmoke;
+    border-radius: 6px;
+    border: 4px solid #7F664F;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 100px;
+    padding: 5%;
+    width: 70%;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+}
+
+.top {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.image-menu img{
+    height: 50%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 4px solid #7F664F;
+    
+}
+
+.details {
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.name-menu , .shop , .price {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 15px;
+}
+
+.other {
+    display: flex;
+    flex-direction: column;
+    align-self: start;
+}
+
+.btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 100px;
+}
+
+.item3 , .add , .time {
+    align-self: start;
+}
+
+label{
+    font-size: 24px;
+}
+
+.item2 input , .item4 input{
+    border-radius: 6px;
+    border: 4px solid #7F664F;
+    padding: 10px;
+}
+
+.item4 input {
+    height: 35px;
+    width: 168%;
+}
+
+.post input{
+    border-radius: 6px;
+    border: 4px solid #7F664F;
+    width: 145px;
+    height: 45px;
+    background-color: #7ED957;
+    color: white;
+    font-weight: bolder;
+}
+
+.cancel input {
+    border-radius: 6px;
+    border: 4px solid #7F664F;
+    background-color: #FF4C4C;
+    width: 145px;
+    height: 45px;
+    color: white;
+    font-weight: bolder;
+}
+
+input{
+    font-size: 18px;
+}
+
+h1{
+    color: white;
+    font-size: 84px;
+}
+
+.item2 input {
+    width: 135%;
+}
+
+@media only screen and (min-width: 1800px){
+    .container {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 1367px){
+    .top{
+        flex-wrap: wrap;
+    }
+
+    .item2 input{
+        width: 90%;
+    }
+
+    .item4 input{
+        width: 120%;
+    }
+   
+    .details {
+        margin-top: -40px;
+    }
+}
