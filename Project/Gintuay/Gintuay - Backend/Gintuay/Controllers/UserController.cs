@@ -7,7 +7,7 @@ namespace Gintuay.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
-    public class UserController : ControllerBase
+    public class UserController : Controller
     {
         private readonly ApiContext _context;
 
@@ -39,7 +39,7 @@ namespace Gintuay.Controllers
 
         // Get
         [HttpGet]
-        public JsonResult Get(int id, string mon)
+        public JsonResult Get(int id)
         {
             var result = _context.Users.Find(id);
 

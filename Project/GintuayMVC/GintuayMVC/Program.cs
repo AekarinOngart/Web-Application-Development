@@ -1,6 +1,12 @@
+using Gintuay.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+builder.Services.AddDbContext<ApiContext>
+    (opt => opt.UseInMemoryDatabase("UserDb"));
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
@@ -22,6 +28,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller}/{action}/{id?}");
 
 app.Run();

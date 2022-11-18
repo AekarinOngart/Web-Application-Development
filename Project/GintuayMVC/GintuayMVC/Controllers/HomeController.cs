@@ -1,5 +1,7 @@
-﻿using GintuayMVC.Models;
+﻿using Gintuay.Data;
+using GintuayMVC.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 
 namespace GintuayMVC.Controllers
@@ -17,10 +19,26 @@ namespace GintuayMVC.Controllers
         {
             return View();
         }
+        public IActionResult main()
+        {
+            Console.WriteLine("Test");
+            return View();
+        }
 
         public IActionResult Privacy()
         {
             return View();
+        }
+
+        private readonly ApiContext _context;
+        public JsonResult Get(int id)
+        {
+            var result = _context.Users.Find(id);
+
+            if (result == null)
+                return new JsonResult(NotFound());
+
+            return new JsonResult(Ok(result));
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

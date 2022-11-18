@@ -5,4 +5,61 @@
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <div>
+        <h2>Id</h2> - <h2 id="stdId"></h2>
+        <h2>Name</h2> - <h2 id="stdName"></h2>
+        <h2>Email</h2> - <h2 id="stdEmail"></h2>
+    </div>
+    <input type="button" onclick="BtnClick()" value="Click me" />
+    <input type="button" onclick="AddUser()" value="Add" />
 </div>
+
+<script>
+    function BtnClick(){
+        $.ajax({
+            url: "/User/GetAll",
+            method: "GET",
+            success: function (data){
+                console.log(data);
+            },
+            error: function (err) {
+                console.error(err);
+            }
+        })
+    }
+
+    function makeid(length) {
+        var result = '';
+        var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        var charactersLength = characters.length;
+        for (var i = 0; i < length; i++) {
+            result += characters.charAt(Math.floor(Math.random() * charactersLength));
+        }
+        return result;
+    }
+
+    function AddUser(){
+
+        var obj = {
+            Id: 0,
+            Name: makeid(6),
+            Password: makeid(10),
+            Email: makeid(10)+"@@gmail.com",
+            Phone: Math.floor(Math.random() * 1000000001).toString(),
+            Qrcode: "QRCODE",
+            Profile_pic: "IMAGE"
+        }
+        console.log(obj);
+        $.ajax({
+            url: "/User/Post",
+            method: "POST",
+            data: obj,
+            success: function (data){
+                console.log(data);
+            },
+            error: function (err) {
+                console.error(err);
+            }
+        })
+    }
+</script>
