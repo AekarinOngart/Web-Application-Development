@@ -16,7 +16,7 @@
 
 </head>
 
-<body>
+<body onload="Startpage()">
     <!--Navbar-->
     <nav>
         <ul>
@@ -58,22 +58,19 @@
             <div class="flex-container">
                 <div class="item">
                     <img src="~/images/Kraprao.jfif" alt="logo" class="item-img"><br>
-                    <div class="name-item">
-                        ปูตีกัมมาสาลา <td class="price">35฿</td>
+                    <div class="all">
+                    <div class="name-item" id="name"></div>
+                    <div class="price" id="price" style="color:black"></div>
+                    <label style="color:black">$</label>
+                </div>
+                    <div class="all">
+                    <label style="color:black">ร้าน : </label>
+                    <div class="shop-name" id="shopName">ร้าน : </div>
                     </div>
-                    <div class="shop-name">ร้าน : เจ้เล็กข้าวแกงตามสั่ง</div>
                     <div class="more-detail">
                         <label for="detail">รายละเอียด</label><br>
-                        <textarea type="text" id="detail" name="detail" class="box"></textarea>
+                        <label id="More"></label>
                     </div>
-                </div>
-                <div class="check-box">
-                    <label>
-                        <input type="checkbox" class="radio" value="1" name="fooby[1][]" /> พิเศษ +5 บาท
-                    </label><br>
-                    <label>
-                        <input type="checkbox" class="radio" value="1" name="fooby[1][]" /> ไข่ดาว +5 บาท
-                    </label>
                 </div>
                 <div class="note">
                     <label for="notes">หมายเหตุ</label><br>
@@ -87,6 +84,37 @@
         </div>
     </form>
     <script src="~/js/effect.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script>
+        function Startpage() {
+            var Ssoid = sessionStorage.getItem("Ssorder")
+            console.log(Ssoid)
+            $.ajax({
+                url: "/PickupOrder/GetAll",
+                method: "GET",
+                success: function (data) {
+                    console.log(data.value)
+                    //for (i in data.value){
+                      //  if (i == Ssoid){
+                        //    var ans = data.value[i];
+                        //}
+                    //}
+                    var ans = data.value[Ssoid]
+                    console.log(ans)
+                    $("#name").text(ans.name);
+                    $("#price").text(ans.price);
+                    $("#shopName").text(ans.shopName);
+                    $("#More").text(ans.other);
+
+                },
+                error: function (err) {
+                    console.error(err);
+                }
+
+            })
+
+        }
+        </script>
 </body>
 
 </html>

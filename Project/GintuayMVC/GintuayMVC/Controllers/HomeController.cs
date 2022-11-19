@@ -43,6 +43,14 @@ namespace GintuayMVC.Controllers
         {
             return View();
         }
+        public IActionResult Addorder()
+        {
+            return View();
+        }
+        public IActionResult Editprofile()
+        {
+            return View();
+        }
         public IActionResult Create_order()
         {
             return View();

@@ -56,12 +56,13 @@
                         var Ssid = data.value[i];
                         sessionStorage.setItem("Ssid", Ssid.id);
                         //console.log(Session)
+                        var o = 1;
                         break;
 
                         } 
                         
-                    } 
-                    location.href = 'https://localhost:7110/home/service'
+                    }if (o == 1){
+                    location.href = 'https://localhost:7110/home/service'}
                 },
                 error: function (err) {
                     console.error(err);

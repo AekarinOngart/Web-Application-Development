@@ -14,7 +14,7 @@
     <title>กิ๋นตวย | Edit Profile</title>
 </head>
 
-<body>
+<body onload="Loader()">
     <!--Navbar-->
     <nav>
         <ul>
@@ -25,43 +25,106 @@
     </nav>
     <!--End-Navbar-->
     <div class="main">แก้ไขโปรไฟล์</div>
-    <form action="">
-        <div class="bottom">
-            <div class="flex-container">
-                <div class="top-in-bottom">
-                    <div class="left">
-                        <div class="box">
-                            <img src="https://i.pinimg.com/564x/bf/8f/7c/bf8f7c5460e75014424781ac53862167.jpg"
-                                alt="avatar">
-                        </div>
-                    </div>
-                    <div class="right">
-                        <div class="left-right">
-                            <label for="Username">Username</label><br>
-                            <label for="E-mail">E-mail</label><br>
-                            <label for="Phopne">Phone </label><br>
-                            <label for="Password">Password</label><br>
-                        </div>
-                        <div class="right-right">
-                            <input type="text" id="Username" name="Username"><br>
-                            <input type="text" id="E-mail" name="E-mail"><br>
-                            <input type="text" id="Phopne" name="Phopne"><br>
-                            <input type="password" id="Password" name="Password"><br>
-                        </div>
+    <div class="bottom">
+        <div class="flex-container">
+            <div class="top-in-bottom">
+                <div class="left">
+                    <div class="box">
+                        <img src="https://i.pinimg.com/564x/bf/8f/7c/bf8f7c5460e75014424781ac53862167.jpg"
+                             alt="avatar">
                     </div>
                 </div>
-                <br><br><br>
-                <div class="qr">
-                    <button class="qrcode">QR Code</button>
+                <div class="right">
+                    <div class="left-right">
+                        <label for="Username">Username</label><br>
+                        <label for="Password">Password</label><br>
+                        <label for="Phopne">Phone </label><br>
+                        <label for="Email">Email</label><br>
+                        <label for="Password">Bank No.</label><br>
+                    </div>
+                    <div class="right-right">
+                        <input type="text" id="username" name="Username" value=""><br>
+                        <input type="password" id="password" name="Password" value=""><br>
+                        <input type="text" id="email" name="Email" value=""><br>
+                        <input type="text" id="tel" name="Phone" value=""><br>
+                        <input type="text" id="bank" name="bank" value=""><br>
+                    </div>
                 </div>
             </div>
-            <div class="save-cancel">
-                <button class="Save">Save</button>
-                <button class="Cancel">Cancel</button>
+            <br><br><br>
+            <div class="qr">
+                <button class="qrcode">QR Code</button>
             </div>
         </div>
-    </form>
+        <div class="save-cancel">
+            <button class="Save" onclick="btnClick()">Save</button>
+            <button class="Cancel">Cancel</button>
+        </div>
+    </div>
 
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script>
+
+        function Loader() {
+            var ss = sessionStorage.getItem("Ssid");
+            $.ajax({
+                url: "/User/Get",
+                method: "GET",
+                data: { Id: ss },
+                success: function (data) {
+                    console.log(data)
+                    document.getElementById("username").value = data.value.username;
+                    document.getElementById("password").value = data.value.password;
+                    document.getElementById("email").value = data.value.email;
+                    document.getElementById("tel").value = data.value.phone;
+                    document.getElementById("bank").value = data.value.qrcode;
+
+                }, error: function (err) {
+                    console.error(err);
+                }
+            })
+
+        }
+
+        function btnClick() {
+            var ss = sessionStorage.getItem("Ssid");
+            var Username = $("#username").val();
+            var Password = $("#password").val();
+            var Email = $("#email").val();
+            var Phone = $("#tel").val();
+            var Qrcode = $("#bank").val();
+
+            var obj = {
+                Id: ss,
+                Username: Username,
+                Password: Password,
+                Email: Email,
+                Phone: Phone,
+                Qrcode: Qrcode,
+                Profile_pic: "0",
+            }
+            SubmitForm(obj);
+
+        }
+
+        function SubmitForm(obj) {
+            $.ajax({
+                url: "/User/Post",
+                method: "POST",
+                data: obj,
+                success: function (data) {
+                    console.log(data)
+                    sessionStorage.removeItem("Ssid");
+                    location.href = 'https://localhost:7110/home/login'
+                },
+                error: function (err) {
+                    console.error(err);
+                }
+
+            })
+        }
+
+    </script>
 </body>
 
 </html>
