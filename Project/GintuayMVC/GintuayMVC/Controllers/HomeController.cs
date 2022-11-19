@@ -15,6 +15,20 @@ namespace GintuayMVC.Controllers
             _logger = logger;
         }
 
+        public IActionResult Service()
+        {
+            return View();
+        }
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+        public IActionResult Register()
+        {
+            return View();
+        }
+
         public IActionResult Index()
         {
             return View();
@@ -29,6 +43,16 @@ namespace GintuayMVC.Controllers
         {
             return View();
         }
+        public IActionResult Create_order()
+        {
+            return View();
+        }
+        public IActionResult Postmenu()
+        {
+            return View();
+        }
+
+
 
         private readonly ApiContext _context;
         public JsonResult Get(int id)

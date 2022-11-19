@@ -12,8 +12,9 @@ namespace Gintuay.Controllers
         public UserController(ApiContext context)
         {
             _context = context;
-            Console.WriteLine(context);
+            //Console.WriteLine(context);
         }
+        // Create/Edit
         [HttpPost]
         public JsonResult Post(User user)
         {
@@ -33,7 +34,7 @@ namespace Gintuay.Controllers
 
             return new JsonResult(Ok(user));
         }
-
+        [HttpGet]
         public JsonResult Get(int id)
         {
             var result = _context.Users.Find(id);
@@ -44,6 +45,7 @@ namespace Gintuay.Controllers
             return new JsonResult(Ok(result));
         }
 
+        [HttpDelete]
         public JsonResult Delete(int id) 
         {
             var result = _context.Users.Find(id);
@@ -57,6 +59,7 @@ namespace Gintuay.Controllers
             return new JsonResult(NoContent());
         }
 
+        [HttpGet]
         public JsonResult GetAll()
         {
             var result = _context.Users.ToList();

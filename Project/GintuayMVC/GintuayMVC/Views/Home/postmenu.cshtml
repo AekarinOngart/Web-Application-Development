@@ -68,7 +68,7 @@
                                     <label for="">ชื่อเมนู</label>
                                 </div>
                                 <div class="item2">
-                                    <input type="text" name="" id="" />
+                                    <input type="text" name="" id="Menu_name" />
                                 </div>
                             </div>
                             <div class="shop">
@@ -76,7 +76,7 @@
                                     <label for="">ร้าน</label>
                                 </div>
                                 <div class="item2">
-                                    <input type="text" name="" id="" />
+                                    <input type="text" name="" id="Shop_name" />
                                 </div>
                             </div>
                             <div class="price">
@@ -84,7 +84,7 @@
                                     <label for="">ราคา</label>
                                 </div>
                                 <div class="item2">
-                                    <input type="text" name="" id="" />
+                                    <input type="text" name="" id="Price" />
                                 </div>
                             </div>
                             <div class="other">
@@ -92,20 +92,19 @@
                                     <label for="">หมายเหตุ</label>
                                 </div>
                                 <div class="item4">
-                                    <input type="text" name="" id="" />
+                                    <input type="text" name="" id="Other" />
                                 </div>
-                            </div>
-                            <div class="add">
-                                <button>+</button>
                             </div>
                             <div class="time">
                                 <label for="">กำหนดเวลา</label>
+                                <br>
+                                <input type="text" name="" id="Time"/>
                             </div>
                         </div>
                     </div>
                     <div class="btn">
                         <div class="post">
-                            <input type="button" value="Post" />
+                            <input type="button" value="Post" onclick="btnClick()"/>
                         </div>
                         <div class="cancel">
                             <input type="button" value="Cancel" />
@@ -116,6 +115,47 @@
         </div>
     </div>
     <script src="~/js/effect.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script>
+
+         function btnClick(){
+            var Name = $("#Menu_name").val();
+            var ShopName = $("#Shop_name").val();
+            var Price = $("#Price").val();
+            var Other = $("#Other").val();
+            var EndTime = $("#Time").val();
+            var Ssid = sessionStorage.getItem("Ssid", Ssid);
+
+
+            var obj = {
+                PickupOrderId: 0,
+                Name: Name,
+                ShopName: ShopName,
+                Price: Price,
+                Other: Other,
+                EndTime: EndTime,
+                User_UserId: Ssid,
+                Image_ImageID: ""
+                    }
+            PostOrder(obj);
+        }
+
+        function PostOrder(obj) {
+            $.ajax({
+                url: "/PickupOrder/Post",
+                method: "POST",
+                data: obj,
+                success: function (data) {
+                    console.log(data);
+                    data = JSON.stringify(data);
+                },
+                error: function (err){
+                    console.error(err);
+                }
+
+            })
+        }
+    </script>
 </body>
 
 </html>

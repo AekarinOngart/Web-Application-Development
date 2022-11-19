@@ -19,15 +19,61 @@
         </div>
         <div class="flex-item-right">
             <section id="welcome">Welcome</section>
-            <form action="" method="post">
                 <input type="text" name="username" id="username" placeholder="username" required>
                 <br><input type="password" name="password" id="password" placeholder="Password" required>
-                <br><input type="submit" value="Login" id="login">
-                <button onclick="location.href='#'" type="button" id="register">
+                <br><input type="submit" value="Login" id="login" onclick="btnClick()">
+                <button onclick="location.href='https://localhost:7110/home/Register'" type="button" id="register">
                     Register</button>
-            </form>
         </div>
     </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script>
+
+        function btnClick(){
+            var Username = $("#username").val();
+            var Password = $("#password").val();
+
+            var obj = {
+                Username: Username,
+                Password: Password       
+            }
+            SubmitForm(obj,Username,Password);
+        }
+
+        function SubmitForm(obj,Username,Password) {
+                $.ajax({
+                    url: "/User/GetAll",
+                    method: "GET",
+                    success: function (data){
+                    //console.log(data);
+                    for (let i in data.value){
+
+                        console.log(data.value[i]['username'])
+                        console.log(data.value[i]['password'])
+                        if (Username == data.value[i]['username'] && Password == data.value[i]['password']){
+                        console.log("Success")
+                        var Ssid = data.value[i];
+                        sessionStorage.setItem("Ssid", Ssid.id);
+                        //console.log(Session)
+                        break;
+
+                        } 
+                    } 
+                    
+                },
+                error: function (err) {
+                    console.error(err);
+                }
+
+            })
+            
+        }
+
+
+    </script>
+
+
 </body>
 
 </html>

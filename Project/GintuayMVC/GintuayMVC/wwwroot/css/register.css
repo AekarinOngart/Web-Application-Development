@@ -60,7 +60,8 @@ body {
     #username,
     #email,
     #password,
-    #tel,
+    #tel, 
+    .tel,
     #register,
     #back {
         font-size: 28px;
@@ -71,7 +72,8 @@ body {
     #username,
     #email,
     #password,
-    #tel {
+    #tel, 
+    .tel {
         width: 500px;
         padding: 20px 20px;
         display: inline-block;
@@ -112,7 +114,8 @@ body {
     #username,
     #email,
     #password,
-    #tel,
+    #tel, 
+    .tel,
     #register,
     #back {
         font-size: 22px;
@@ -123,7 +126,8 @@ body {
     #username,
     #email,
     #password,
-    #tel {
+    #tel, 
+    .tel {
         width: 450px;
         padding: 15px 15px;
         display: inline-block;
@@ -163,7 +167,8 @@ body {
     #username,
     #email,
     #password,
-    #tel,
+    #tel, 
+    .tel,
     #register,
     #back {
         font-size: 16px;
@@ -173,7 +178,8 @@ body {
     #username,
     #email,
     #password,
-    #tel {
+    #tel, 
+    .tel {
         width: 300px;
         padding: 10px 10px;
         display: inline-block;
@@ -208,7 +214,8 @@ body {
     #username,
     #email,
     #password,
-    #tel,
+    #tel, 
+    .tel,
     #register,
     #back {
         font-size: 16px;
@@ -218,7 +225,8 @@ body {
     #username,
     #email,
     #password,
-    #tel {
+    #tel, 
+    .tel {
         width: 300px;
         padding: 10px 10px;
         display: inline-block;
@@ -259,7 +267,8 @@ body {
     #username,
     #email,
     #password,
-    #tel,
+    #tel, 
+    .tel,
     #register,
     #back {
         font-size: 22px;
@@ -270,7 +279,8 @@ body {
     #username,
     #email,
     #password,
-    #tel {
+    #tel, 
+    .tel {
         width: 450px;
         padding: 15px 15px;
         display: inline-block;
@@ -311,7 +321,8 @@ body {
     #username,
     #email,
     #password,
-    #tel,
+    #tel, 
+    .tel,
     #register,
     #back {
         font-size: 16px;
@@ -322,7 +333,8 @@ body {
     #username,
     #email,
     #password,
-    #tel {
+    #tel, 
+    .tel {
         width: 450px;
         padding: 15px 15px;
         display: inline-block;
@@ -364,6 +376,7 @@ body {
     #email,
     #password,
     #tel,
+    .tel,
     #register,
     #back {
         font-size: 16px;
@@ -373,7 +386,8 @@ body {
     #username,
     #email,
     #password,
-    #tel {
+    #tel, 
+    .tel {
         width: 300px;
         padding: 10px 10px;
         display: inline-block;
@@ -414,7 +428,8 @@ body {
     #username,
     #email,
     #password,
-    #tel,
+    #tel, 
+    .tel,
     #register,
     #back {
         font-size: 12px;
@@ -424,7 +439,8 @@ body {
     #username,
     #email,
     #password,
-    #tel {
+    #tel, 
+    .tel {
         width: 175px;
         padding: 8px 8px;
         display: inline-block;

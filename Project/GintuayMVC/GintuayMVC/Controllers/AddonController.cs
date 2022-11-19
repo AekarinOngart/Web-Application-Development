@@ -5,8 +5,6 @@ using Gintuay.Data;
 
 namespace Gintuay.Controllers
 {
-    [Route("api/[controller]/[action]")]
-    [ApiController]
     public class AddonController : ControllerBase
     {
         private readonly ApiContext _context;
@@ -65,7 +63,7 @@ namespace Gintuay.Controllers
             return new JsonResult(NoContent());
         }
 
-        [HttpGet()]
+        [HttpGet]
         public JsonResult GetAll()
         {
             var result = _context.Addons.ToList();
