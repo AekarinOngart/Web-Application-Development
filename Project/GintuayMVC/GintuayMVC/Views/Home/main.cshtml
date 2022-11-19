@@ -54,42 +54,42 @@
     <div class="main" onclick="showoff(['menu','menu1'])">รายการอาหาร</div>
     <div class="container" onclick="showoff(['menu','menu1'])">
         <div class="flex-container">
-            <div class="item">
+            <div class="item" onclick="ssorder0()">
                 <img src="~/images/Kraprao.jpg"></img>
                 <div class="name" id="Name0"></div>
                 <div class="time" id="EndTime0"></div>
             </div>
-            <div class="item">
+            <div class="item" onclick="ssorder1()">
                 <img src="~/images/nutget.jpg"></img>
                 <div class="name" id="Name1"></div>
                 <div class="time" id="EndTime1"></div>
             </div>
-            <div class="item">
+            <div class="item" onclick="ssorder2()">
                 <img src="~/images/Kraprao.jpg"></img>
                 <div class="name" id="Name2"></div>
                 <div class="time" id="EndTime2"></div>
             </div>
-            <div class="item">
+            <div class="item" onclick="ssorder3()">
                 <img src="~/images/nutget.jpg"></img>
                 <div class="name" id="Name3"></div>
                 <div class="time" id="EndTime3"></div>
             </div>
-            <div class="item">
+            <div class="item" onclick="ssorder4()">
                 <img src="~/images/Kraprao.jpg"></img>
                 <div class="name" id="Name4"></div>
                 <div class="time" id="EndTime4"></div>
             </div>
-            <div class="item">
+            <div class="item" onclick="ssorder5()">
                 <img src="~/images/nutget.jpg"></img>
                 <div class="name" id="Name5"></div>
                 <div class="time" id="EndTime5"></div>
             </div>
-            <div class="item">
+            <div class="item" onclick="ssorder6()">
                 <img src="~/images/Kraprao.jpg"></img>
                 <div class="name" id="Name6"></div>
                 <div class="time" id="EndTime6"></div>
             </div>
-            <div class="item">
+            <div class="item" onclick="ssorder7()">
                 <img src="~/images/nutget.jpg"></img>
                 <div class="name" id="Name7"></div>
                 <div class="time" id="EndTime7"></div>
@@ -120,7 +120,33 @@
                 }
 
             })
-        }
+        
+}
+            function ssorder0(){
+                sessionStorage.setItem("Ssorder", 0);
+
+            }
+            function ssorder1() {
+                sessionStorage.setItem("Ssorder", 1);
+            }
+            function ssorder2() {
+                sessionStorage.setItem("Ssorder", 2);
+            }
+            function ssorder3() {
+                sessionStorage.setItem("Ssorder", 3);
+            }
+            function ssorder4() {
+                sessionStorage.setItem("Ssorder", 4);
+            }
+            function ssorder5() {
+                sessionStorage.setItem("Ssorder", 5);
+            }
+            function ssorder6() {
+                sessionStorage.setItem("Ssorder", 6);
+            }
+            function ssorder7() {
+                sessionStorage.setItem("Ssorder", 7);
+            }
     </script>
 </body>
 
