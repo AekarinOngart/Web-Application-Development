@@ -36,6 +36,10 @@ namespace GintuayMVC.Controllers
         {
             return View();
         }
+        public IActionResult Popup2()
+        {
+            return View();
+        }
 
         public IActionResult Index()
         {

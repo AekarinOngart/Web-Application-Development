@@ -96,7 +96,7 @@
                 <h1>ชำระสำเร็จ</h1>
                 <br />
                 <br />
-                <button class="btn-popup-success" id="close2">BACK</button>
+                <button class="btn-popup-success" id="close2" >BACK</button>
             </div>
         </div>
     </div>
@@ -156,10 +156,11 @@
                     console.log(pick,"111111")
                     var pickupOrderId = pick['pickupOrderId'] 
                     var pickupUserId = pick['user_UserId']
+                    var name_order = pick['name']
                     document.getElementById("pic").src = pick["qrcode"];
                     console.log("Pick_Order_Id",pickupOrderId,"Pickup_User_Id",pickupUserId,"Bill",bill)
 
-                    Startgetuser(pickupOrderId, pickupUserId,bill);
+                    Startgetuser(pickupOrderId, pickupUserId,bill,name_order);
 
                 },
                 error: function (err) {
@@ -170,7 +171,7 @@
 
         }
         
-        function Startgetuser(pickupOrderId, pickupUserId, bill) {
+        function Startgetuser(pickupOrderId, pickupUserId, bill, name_order) {
             var Ssid = sessionStorage.getItem("Ssid")
             //console.log(Ssoid)
             $.ajax({
@@ -184,7 +185,7 @@
                     //console.log(Ssid)
                     //console.log(userId)
 
-                    pay(userId, pickupOrderId, pickupUserId, bill)
+                    pay(userId, pickupOrderId, pickupUserId, bill, name_order)
 
                  
                 },
@@ -196,12 +197,12 @@
         }
 
 
-        function pay(userId, pickupOrderId, pickupUserId, bill) {
+        function pay(userId, pickupOrderId, pickupUserId, bill, name_order) {
             //var
             //getpost model 3 model
             var Location = $("#address").val();
             var Other = $("#notes").val();
-            console.log(userId, pickupOrderId, pickupUserId, bill)
+            console.log(userId, pickupOrderId, pickupUserId, bill,name_order)
          
                 var obj = {
                     BuyOrderId: 0,
@@ -212,6 +213,8 @@
                     Other: Other,
                     Status: "รอการตรวจสอบ",
                     Bill: bill,
+                    Name_order:name_order,
+
                 }
                 
                 SubmitForm(obj);
@@ -228,6 +231,8 @@
                 success: function (data) {
                     console.log(data);
                     data = JSON.stringify(data);
+                    location.href = 'https://localhost:7110/home/popup2'
+                    
                 },
                 error: function (err) {
                     console.error(err);
@@ -235,6 +240,7 @@
 
             })
     }
+
     
     </script>
 </body>

@@ -1,0 +1,105 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/popup.css" />
+    <link rel="stylesheet" href="~/css/navbar.css" />
+    <title>กิ๋นตวย | POPUP</title>
+</head>
+
+<body onload="Startpage1()">
+    <!--Navbar-->
+    <nav>
+        <ul>
+            <li>
+                <img src="~/images/logo.png" alt="logo" id="logo" />
+            </li>
+            <li>
+                <img src="~/images/notification.png" class="notification" onclick="show1('menu1')">
+                <ul id="menu1">
+                </ul>
+                <img src="~/images/profile.png" class="profile" onclick="show('menu')" />
+                <ul id="menu">
+                    <li class="sub-item">
+                        <span class="material-icons-outlined"> grid_view </span>
+                        <p>Dashboard</p>
+                    </li>
+                    <li class="sub-item">
+                        <span class="material-icons-outlined">
+                            format_list_bulleted
+                        </span>
+                        <p>My Orders</p>
+                    </li>
+                    <li class="sub-item">
+                        <span class="material-icons-outlined"> manage_accounts </span>
+                        <p>Update Profile</p>
+                    </li>
+                    <li class="sub-item">
+                        <span class="material-icons-outlined"> logout </span>
+                        <p onclick="Logout()">Logout</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <!--End-Navbar-->
+    <div class="content" onclick="showoff(['menu','menu1'])">
+        <!--Content-Popup-->
+        <div class="popup2" style="display: block;">
+            <div class="pay-cancel">
+                <br />
+                <img src="~/images/success.png" alt="" class="success" />
+                <br />
+                <br />
+                <h1 onclick="St()">ชำระสำเร็จ</h1>
+                <br />
+                <br />
+                <button class="btn-popup-success" id="close2" onclick="location.href='https://localhost:7110/home/service'">BACK</button>
+            </div>
+        </div>
+    </div>
+    <script src="~/js/effect.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script>
+        function logout() {
+            sessionStorage.removeItem("Ssid");
+            location.href = 'https://localhost:7110/home/login'
+        }
+
+    function St() {
+    var Ssid = sessionStorage.getItem("Ssid")
+    //console.log(Ssoid)
+    $.ajax({
+        url: "/BuyOrder/GetAll",
+        method: "GET",
+        success: function (data) {
+            console.log(data)
+            //console.log(data.value)
+            //var p = Ssid - 1
+            //var user = data.value[p];
+            //var userId = user['id']
+            //console.log(Ssid)
+            //console.log(userId)
+
+            //pay(userId, pickupOrderId, pickupUserId, bill, name_order)
+
+
+        },
+        error: function (err) {
+            console.error(err);
+        }
+
+    })
+}
+
+    </script>
+</body>
+
+</html>

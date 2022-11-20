@@ -10,5 +10,6 @@
         public string Other { get; set; }
         public string Status { get; set; }
         public string Bill { get; set; }
+        public string Name_order { get; set; }
     }
 }
