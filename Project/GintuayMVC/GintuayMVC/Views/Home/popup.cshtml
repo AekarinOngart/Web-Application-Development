@@ -183,10 +183,11 @@
                     var p = Ssid - 1
                     var user = data.value[p];
                     var userId = user['id']
+                    var user_name = user['username']
                     //console.log(Ssid)
-                    //console.log(userId)
+                    console.log(userId,user_name)
 
-                    pay(userId, pickupOrderId, pickupUserId, bill, name_order, name_pick)
+                    pay(userId, pickupOrderId, pickupUserId, bill, name_order, name_pick, user_name)
 
                  
                 },
@@ -198,7 +199,7 @@
         }
 
 
-        function pay(userId, pickupOrderId, pickupUserId, bill, name_order,name_pick) {
+        function pay(userId, pickupOrderId, pickupUserId, bill, name_order, name_pick, user_name) {
             //var
             //getpost model 3 model
             var Location = $("#address").val();
@@ -216,6 +217,7 @@
                     Bill: bill,
                     Name_order:name_order,
                     Name_pick:name_pick,
+                Username_BuyOrder: user_name,
 
                 }
                 
@@ -233,7 +235,7 @@
                 success: function (data) {
                     console.log(data);
                     data = JSON.stringify(data);
-                    location.href = 'https://localhost:7110/home/popup2'
+                    //location.href = 'https://localhost:7110/home/popup2'
                     
                 },
                 error: function (err) {
