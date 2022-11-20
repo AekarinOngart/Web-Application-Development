@@ -60,6 +60,11 @@ namespace GintuayMVC.Controllers
             return View();
         }
 
+        public IActionResult Popup()
+        {
+            return View();
+        }
+
 
 
         private readonly ApiContext _context;

@@ -46,15 +46,15 @@ function show1(id) {
 }
 
 //pop-up
-document.getElementById("pop").onclick = popup1;
+// document.getElementById("popup1").onclick = popup1;
 document.getElementById("pay").onclick = popup2;
 
-function popup1() {
-    document.querySelector(".popup1").style.display = "block";
-    document.querySelector("#close").addEventListener("click", function () {
-        document.querySelector(".popup1").style.display = "none";
-    });
-}
+// function popup1() {
+//     document.querySelector(".popup1").style.display = "block";
+//     document.querySelector("#close").addEventListener("click", function () {
+//         document.querySelector(".popup1").style.display = "block";
+//     });
+// }
 
 function popup2() {
     document.querySelector(".popup1").style.display = "none";
@@ -63,5 +63,6 @@ function popup2() {
         .querySelector("#close2")
         .addEventListener("click", function () {
             document.querySelector(".popup2").style.display = "none";
+            document.querySelector(".popup1").style.display = "block";
         });
 }

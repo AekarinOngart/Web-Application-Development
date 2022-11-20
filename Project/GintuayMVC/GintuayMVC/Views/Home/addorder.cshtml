@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>กิ๋นตวย | Add order</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
-    <link rel="stylesheet" href="~/css/addorder.css">
+    <link rel="stylesheet" href="~/css/addorder1.css">
     <link rel="stylesheet" href="~/css/navbar.css">
 
 </head>
@@ -58,18 +58,20 @@
             <div class="flex-container">
                 <div class="item">
                     <img src="~/images/Kraprao.jfif" alt="logo" class="item-img"><br>
+                    <div class="all1">
+                        <div class="name-item" id="name">ข้าวหมกไก้</div>
+                        <div class="price" id="price" style="color:black">40</div>
+                        <div class="aw" style="color:black">$</div>
+                    </div>
                     <div class="all">
-                    <div class="name-item" id="name"></div>
-                    <div class="price" id="price" style="color:black"></div>
-                    <label style="color:black">$</label>
-                </div>
-                    <div class="all">
-                    <label style="color:black">ร้าน : </label>
-                    <div class="shop-name" id="shopName">ร้าน : </div>
+                        <label style="color:black" class="t">ร้าน : </label>
+                        <div class="shop-name" id="shopName">ป๊าอุ๊</div>
                     </div>
                     <div class="more-detail">
                         <label for="detail">รายละเอียด</label><br>
-                        <label id="More"></label>
+                        <div class="more-bock">
+                            <label class="moore" id="More">dsdsdssadsadasdsadasasdsadasd</label>
+                        </div>
                     </div>
                 </div>
                 <div class="note">
@@ -95,9 +97,9 @@
                 success: function (data) {
                     console.log(data.value)
                     //for (i in data.value){
-                      //  if (i == Ssoid){
-                        //    var ans = data.value[i];
-                        //}
+                    //  if (i == Ssoid){
+                    //    var ans = data.value[i];
+                    //}
                     //}
                     var ans = data.value[Ssoid]
                     console.log(ans)
@@ -114,7 +116,7 @@
             })
 
         }
-        </script>
+    </script>
 </body>
 
 </html>

@@ -34,6 +34,37 @@ namespace Gintuay.Controllers
 
             return new JsonResult(Ok(user));
         }
+
+        [HttpPut]
+        public JsonResult Put(User user)
+        {
+          
+           
+            
+                var userInDb = _context.Users.Find(user.Id);
+                if (userInDb == null)
+                {
+                    return new JsonResult(NotFound());
+                }
+                else
+                {
+                    userInDb.Id= user.Id;
+                    userInDb.Username = user.Username;
+                    userInDb.Password = user.Password;
+                    userInDb.Email = user.Email;
+                    userInDb.Qrcode = user.Qrcode;
+                    userInDb.Phone = user.Phone;
+                    userInDb.Profile_pic = user.Profile_pic;   
+            }
+
+
+
+
+            _context.SaveChanges();
+
+            return new JsonResult(Ok(userInDb));
+        }
+
         [HttpGet]
         public JsonResult Get(int id)
         {

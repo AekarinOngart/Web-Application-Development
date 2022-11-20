@@ -109,8 +109,8 @@
 
         function SubmitForm(obj) {
             $.ajax({
-                url: "/User/Post",
-                method: "POST",
+                url: "/User/Put",
+                method: "PUT",
                 data: obj,
                 success: function (data) {
                     console.log(data)
