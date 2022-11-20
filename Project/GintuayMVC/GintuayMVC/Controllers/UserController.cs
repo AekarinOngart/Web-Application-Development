@@ -4,7 +4,7 @@ using Gintuay.Models;
 using Gintuay.Data;
 
 namespace Gintuay.Controllers
-{
+{ 
     public class UserController : Controller
     {
         private readonly ApiContext _context;

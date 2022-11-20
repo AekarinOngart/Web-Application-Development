@@ -113,17 +113,17 @@
                 method: "GET",
                 success: function (data) {
                     console.log(data.value)
-                    var ans = data.value[Ssoid];
-                    var bill = parseInt(ans.price) + 10;
+                    var pick = data.value[Ssoid];
+                    var bill = parseInt(pick.price) + 10;
                     console.log(ans)
-                    $("#shopname").text(ans.shopName);
-                    $("#name").text(ans.name);
-                    $("#name0").text(ans.name);
-                    $("#price").text(ans.price);
-                    $("#price0").text(ans.price);
+                    $("#shopname").text(pick.shopName);
+                    $("#name").text(pick.name);
+                    $("#name0").text(pick.name);
+                    $("#price").text(pick.price);
+                    $("#price0").text(pick.price);
                     $("#bill").text(bill)
+                    Startgetuser();
 
-                 
                 },
                 error: function (err) {
                     console.error(err);
@@ -133,16 +133,29 @@
 
         }
 
+        function Startgetuser(){
+            var Ssid = sessionStorage.getItem("Ssid")
+            console.log(Ssoid)
+            $.ajax({
+                url: "/User/GetAll",
+                method: "GET",
+                success: function (data) {
+                    console.log(data.value)
+                    var user = data.value[Ssid];
+                    console.log(user)
 
-        function pay(){
-            var ss = sessionStorage.getItem("Ssid");
-            var User_UserId = ss;
-            var PickupOrder_PickupOrderId = $("notes").val();
-            var PickupOrder_User_UserId = $("#address").val();
-            var Location = $("notes").val();
-            var Other = $("#address").val();
-            var Status = $("#address").val();
-            var Bill = $("notes").val();
+                 
+                },
+                error: function (err) {
+                    console.error(err);
+                }
+
+            })
+        }
+
+
+        function pay(User_UserId, PickupOrder_PickupOrderId, PickupOrder_User_UserId, Location, Other, Bill ) {
+            //var
             //getpost model 3 model
 
                 var obj = {
@@ -152,7 +165,7 @@
                     PickupOrder_User_UserId: PickupOrder_User_UserId,
                     Location: Location,
                     Other: Other,
-                    Status: Status,
+                    Status: 0,
                     Bill: Bill,
                 }
                 SubmitForm(obj);
