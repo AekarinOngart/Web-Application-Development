@@ -113,16 +113,19 @@
                     console.log(data.value[Ssoid])
                     var pick = data.value[Ssoid];
                     var bill = parseInt(pick.price) + 10;
-                    console.log(pick)
+                    //console.log(pick)
                     $("#shopname").text(pick.shopName);
                     $("#name").text(pick.name);
                     $("#name0").text(pick.name);
                     $("#price").text(pick.price);
                     $("#price0").text(pick.price);
                     $("#bill").text(bill)
-                    console.log(pick)
+                    //console.log(pick)
                     document.getElementById("pic").src = pick["qrcode"];
-                    //Startgetuser();
+                    var PickupOrderId = pick.PickupOrderId;
+                    var PickupOrder_User_UserId = pick.PickupOrder_User_UserId;
+                    var bill = bill;
+                    Startgetuser(pick.PickupOrderId, PickupOrder_User_UserId, bill);
 
                 },
                 error: function (err) {
@@ -132,18 +135,22 @@
             })
 
         }
-        /*
-        function Startgetuser(){
+        
+        function Startgetuser(PickupOrderId,PickupOrder_User_UserId,bill) {
+            var Location = $("#address").val();
+            var Other $("#notes").val();
             var Ssid = sessionStorage.getItem("Ssid")
             console.log(Ssoid)
             $.ajax({
                 url: "/User/GetAll",
                 method: "GET",
                 success: function (data) {
-                    console.log(data.value)
+                    console.log(data)
                     var user = data.value[Ssid];
-                    console.log(user)
-
+                    //console.log(user)
+                    var User_UserId = user.Id;
+                    
+                    pay(User_UserId, PickupOrder_PickupOrderId, PickupOrder_User_UserId, Location, Other, Bill);
                  
                 },
                 error: function (err) {
@@ -154,7 +161,7 @@
         }
 
 
-        function pay(User_UserId, PickupOrder_PickupOrderId, PickupOrder_User_UserId, Location, Other, Bill ) {
+        function pay(User_UserId, PickupOrder_PickupOrderId, PickupOrder_User_UserId, Location, Other, Bill) {
             //var
             //getpost model 3 model
 
@@ -165,7 +172,7 @@
                     PickupOrder_User_UserId: PickupOrder_User_UserId,
                     Location: Location,
                     Other: Other,
-                    Status: 0,
+                    Status: "รอการตรวจสอบ",
                     Bill: Bill,
                 }
                 SubmitForm(obj);
@@ -181,7 +188,6 @@
                 data: obj,
                 success: function (data) {
                     console.log(data);
-                    data = JSON.stringify(data);
                 },
                 error: function (err) {
                     console.error(err);
@@ -189,7 +195,7 @@
 
             })
     }
-    */
+    
     </script>
 </body>
 
