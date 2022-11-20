@@ -123,9 +123,10 @@
                 success: function (data) {
                     console.log(data.value[0])
                     var l = data.value[0];
-                    var l1 = l['qrcode'];
-                    console.log(l1)
-                    btnClick(l1)
+                    var qrcode = l['qrcode'];
+                    var username = l['username'];
+                    console.log(qrcode)
+                    btnClick(qrcode,username)
 
                 }
                 ,
@@ -135,7 +136,7 @@
 
             })
         }
-        function btnClick(l1) {
+        function btnClick(qrcode,username) {
 
 
             var Name = $("#Menu_name").val();
@@ -144,7 +145,8 @@
             var Other = $("#Other").val();
             var EndTime = $("#Time").val();
             var Ssid = sessionStorage.getItem("Ssid", Ssid);
-            var Qrcode = l1
+            var Qrcode = qrcode
+            var UsernamePick = username
 
             var obj = {
                 PickupOrderId: 0,
@@ -155,7 +157,8 @@
                 EndTime: EndTime,
                 User_UserId: Ssid,
                 Image_ImageID: "",
-                Qrcode: Qrcode
+                Qrcode: Qrcode,
+                UsernamePick: UsernamePick,
 
             }
             PostOrder(obj);

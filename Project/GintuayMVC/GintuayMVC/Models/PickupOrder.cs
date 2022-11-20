@@ -11,6 +11,7 @@
         public int User_UserId { get; set; }
         public int Image_ImageID { get; set; }
         public string Qrcode { get; set; }
+        public string UsernamePick { get; set; }
 
     }
 }

@@ -157,10 +157,11 @@
                     var pickupOrderId = pick['pickupOrderId'] 
                     var pickupUserId = pick['user_UserId']
                     var name_order = pick['name']
+                    var name_pick = pick['usernamePick']
                     document.getElementById("pic").src = pick["qrcode"];
                     console.log("Pick_Order_Id",pickupOrderId,"Pickup_User_Id",pickupUserId,"Bill",bill)
 
-                    Startgetuser(pickupOrderId, pickupUserId,bill,name_order);
+                    Startgetuser(pickupOrderId, pickupUserId,bill,name_order,name_pick);
 
                 },
                 error: function (err) {
@@ -171,7 +172,7 @@
 
         }
         
-        function Startgetuser(pickupOrderId, pickupUserId, bill, name_order) {
+        function Startgetuser(pickupOrderId, pickupUserId, bill, name_order,name_pick) {
             var Ssid = sessionStorage.getItem("Ssid")
             //console.log(Ssoid)
             $.ajax({
@@ -185,7 +186,7 @@
                     //console.log(Ssid)
                     //console.log(userId)
 
-                    pay(userId, pickupOrderId, pickupUserId, bill, name_order)
+                    pay(userId, pickupOrderId, pickupUserId, bill, name_order, name_pick)
 
                  
                 },
@@ -197,12 +198,12 @@
         }
 
 
-        function pay(userId, pickupOrderId, pickupUserId, bill, name_order) {
+        function pay(userId, pickupOrderId, pickupUserId, bill, name_order,name_pick) {
             //var
             //getpost model 3 model
             var Location = $("#address").val();
             var Other = $("#notes").val();
-            console.log(userId, pickupOrderId, pickupUserId, bill,name_order)
+            console.log(userId, pickupOrderId, pickupUserId, bill, name_order, name_pick)
          
                 var obj = {
                     BuyOrderId: 0,
@@ -214,6 +215,7 @@
                     Status: "รอการตรวจสอบ",
                     Bill: bill,
                     Name_order:name_order,
+                    Name_pick:name_pick,
 
                 }
                 

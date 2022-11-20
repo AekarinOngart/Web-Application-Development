@@ -14,7 +14,7 @@
     <title>กิ๋นตวย | Check Order</title>
 </head>
 
-<body>
+<body onload="Start()">
     <!--Navbar-->
     <nav>
         <ul>
@@ -55,41 +55,100 @@
             <div class="box">
                 <img src="https://i.pinimg.com/564x/bf/8f/7c/bf8f7c5460e75014424781ac53862167.jpg" alt="avatar">
             </div>
-            <div class="username">มาร์คส่งอาหาร</div>
+            <div class="username" id="username">มาร์คส่งอาหาร</div>
         </div>
         <div class="right">
             <div class="flex-container">
                 <div class="detail">
                     <img class="order" src="~/images/Kraprao.jpg">
                     <div class="box">
-                        <div class="ordername">ชื่อ.........</div>
-                        <div class="address">ที่อยู่........</div>
+                        <div class="ordername" id="ordername1">ชื่อ.........</div>
+                        <div class="address" id="address1">ที่อยู่........</div>
                     </div>
-                    <div class="status">จ่ายเงินแล้ว 50฿</div>
+                    <div class="status" id="status1">จ่ายเงินแล้ว 50฿</div>
                 </div>
                 <div class="detail">
                     <img class="order" src="~/images/Kraprao.jpg">
                     <div class="box">
-                        <div class="ordername">ชื่อ.........</div>
-                        <div class="address">ที่อยู่........</div>
+                        <div class="ordername" id="ordername2">ชื่อ.........</div>
+                        <div class="address" id="address2">ที่อยู่........</div>
                     </div>
-                    <div class="status">จ่ายเงินแล้ว 50฿</div>
+                    <div class="status"id="status2">จ่ายเงินแล้ว 50฿</div>
                 </div>
                 <div class="detail">
                     <img class="order" src="~/images/Kraprao.jpg">
                     <div class="box">
-                        <div class="ordername">ชื่อ.........</div>
-                        <div class="address">ที่อยู่........</div>
+                        <div class="ordername" id="ordername3">ชื่อ.........</div>
+                        <div class="address" id="address3">ที่อยู่........</div>
                     </div>
-                    <div class="status">จ่ายเงินแล้ว 50฿</div>
+                    <div class="status" id="status3">จ่ายเงินแล้ว 50฿</div>
                 </div>
 
 
-            </div>
-            <div class="sum">รวมยอด 150฿</div>
-        </div>
+
+
     </div>
     <script src="~/js/effect.js"></script>
+   <script src="~/lib/jquery/dist/jquery.min.js"></script>
+       <script>   function Start() {
+            var Ssid = sessionStorage.getItem("Ssid")
+            //console.log(Ssid)
+            $.ajax({
+                url: "/User/GetAll",
+                method: "GET",
+                success: function (data) {
+                    console.log(data.value)
+                    var p = Ssid - 1
+                    var user = data.value[p];
+                    var username = user['username'];
+                    $("#username").text(username);
+                    var userid = user['id'];
+                    console.log(userid)
+                    Getorder()
+  
+                 
+                },
+                error: function (err) {
+                    console.error(err);
+                }
+
+            })
+        }
+        function Getorder() {
+            var Ssid = sessionStorage.getItem("Ssid")
+            //console.log(Ssid)
+            $.ajax({
+                url: "/BuyOrder/GetAll",
+                method: "GET",
+                success: function (data) {
+                    //console.log(data.value)
+                    var o = 1
+                    for (i in data.value){
+                        console.log(data.value[i])
+                        var gett = data.value[i]
+
+                        if(gett['user_UserId'] == Ssid){
+                            console.log(gett)
+                            $(`#ordername${o}`).text(gett['name_order']);
+                            $(`#address${o}`).text(gett['location']);
+                            $(`#status${o}`).text(gett['status']);
+                            o++
+                        }
+                    }
+                   
+
+
+                },
+                error: function (err) {
+                    console.error(err);
+                }
+
+            })
+        }
+
+
+
+        </script> 
 </body>
 
 </html>
