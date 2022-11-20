@@ -15,7 +15,7 @@
     <title>กิ๋นตวย | POPUP</title>
 </head>
 
-<body>
+<body onload="Startpage()">
     <!--Navbar-->
     <nav>
         <ul>
@@ -57,25 +57,23 @@
         <div class="popup1" onclick="showoff(['menu','menu1'])">
             <img src="~/images/Kraprao.jfif" alt="logo" class="item-img" />
             <div class="name-item">
-                ข้าวผัด
-                <td class="price">35฿</td>
+                <p id="name0" style="display:inline;"></p>
+                <td class="price"><p id="price0" style="display:inline;"></p><p style="display:inline;"> บาท</p></td>
             </div>
-            <div class="shop-name">ร้าน : เจ้เล็กข้าวแกงตามสั่ง</div>
+            <div class="shop-name">ชื่อร้าน : <p id="shopname" style="display:inline;"></p></div>
             <div class="flex-container">
                 <div class="flex-item-left">
                     <p>รายการอาหาร</p>
-                    <p style="margin-left: 9%">ข้าวผัด</p>
-                    <p style="margin-left: 9%">ไข่ดาว</p>
+                    <p style="margin-left: 9%" id="name">ข้าวผัด</p>
                     <p style="margin-left: 9%">ค่าหิ้ว</p>
                     <p style="margin-left: 9%">รวม</p>
                     <p>ที่อยู่</p>
                 </div>
                 <div class="flex-item-right">
                     <p>ราคา</p>
-                    <p style="margin-left: 9%">35</p>
-                    <p style="margin-left: 9%">5</p>
+                    <p style="margin-left: 9%" id="price"></p>
                     <p style="margin-left: 9%">10</p>
-                    <p style="margin-left: 9%">50</p>
+                    <p style="margin-left: 9%" id="bill"></p>
                 </div>
             </div>
             <input type="text" name="address" id="address" placeholder="ที่อยู่" required>
@@ -84,9 +82,9 @@
                 <label for="notes">หมายเหตุ</label><br>
                 <textarea type="text" id="notes" name="notes" class="box"></textarea>
             </div>
-            <img src="~/images/qr.png" alt="logo" class="qr" />
+            <img src="" alt="logo" class="qr" id="qr" />
             <div class="btn">
-                <button class="btn-popup-pay" id="pay">Pay</button>
+                <button class="btn-popup-pay" id="pay" onclick="pay()">Pay</button>
                 <button class="btn-popup-cancel" id="close">cancel</button>
             </div>
         </div>
@@ -105,7 +103,79 @@
         </div>
     </div>
     <script src="~/js/effect.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script>
+        function Startpage() {
+            var Ssoid = sessionStorage.getItem("Ssorder")
+            console.log(Ssoid)
+            $.ajax({
+                url: "/PickupOrder/GetAll",
+                method: "GET",
+                success: function (data) {
+                    console.log(data.value)
+                    var ans = data.value[Ssoid];
+                    var bill = parseInt(ans.price) + 10;
+                    console.log(ans)
+                    $("#shopname").text(ans.shopName);
+                    $("#name").text(ans.name);
+                    $("#name0").text(ans.name);
+                    $("#price").text(ans.price);
+                    $("#price0").text(ans.price);
+                    $("#bill").text(bill)
+
+                 
+                },
+                error: function (err) {
+                    console.error(err);
+                }
+
+            })
+
+        }
+
+
+        function pay(){
+            var ss = sessionStorage.getItem("Ssid");
+            var User_UserId = ss;
+            var PickupOrder_PickupOrderId = $("notes").val();
+            var PickupOrder_User_UserId = $("#address").val();
+            var Location = $("notes").val();
+            var Other = $("#address").val();
+            var Status = $("#address").val();
+            var Bill = $("notes").val();
+            //getpost model 3 model
+
+                var obj = {
+                    BuyOrderId: 0,
+                    User_UserId: User_UserId,
+                    PickupOrder_PickupOrderId: PickupOrder_PickupOrderId,
+                    PickupOrder_User_UserId: PickupOrder_User_UserId,
+                    Location: Location,
+                    Other: Other,
+                    Status: Status,
+                    Bill: Bill,
+                }
+                SubmitForm(obj);
+
+
+
+            }
+
+        function SubmitForm(obj) {
+            $.ajax({
+                url: "/BuyOrder/Post",
+                method: "POST",
+                data: obj,
+                success: function (data) {
+                    console.log(data);
+                    data = JSON.stringify(data);
+                },
+                error: function (err) {
+                    console.error(err);
+                }
+
+            })
+    }
 
     </script>
 </body>

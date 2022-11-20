@@ -20,22 +20,23 @@
         </div>
         <div class="flex-item-right">
             <section id="head_register">Register</section>
-                <input type="text" name="username" id="username" placeholder="Username" required>
-                <br><input type="email" name="email" id="email" placeholder="E-mail" required>
-                <br><input type="password" name="password" id="password" placeholder="Password" required>
-                <br><input type="tel" name="tel" id="tel" placeholder="Phone Number" required>
-                <br><input type="text" name="bank" class="tel" id="bank" placeholder="Bank No." required>
-                <!--<br><span>qrcode: </span><input type="file" name="file" id="qrcode" required>-->
-                <br><input type="submit" value="Register" id="register" onclick="btnClick()">
+            <input type="text" name="username" id="username" placeholder="Username" required>
+            <br><input type="email" name="email" id="email" placeholder="E-mail" required>
+            <br><input type="password" name="password" id="password" placeholder="Password" required>
+            <br><input type="tel" name="tel" id="tel" placeholder="Phone Number" required>
+            <!--<br><input type="text" name="bank" class="tel" id="bank" placeholder="Bank No." required>-->
+            <br><span>qrcode: </span><input type="file" name="file" id="bank" required />
+            <br><input type="submit" value="Register" id="register" onclick="btnClick()">
             <button onclick="location.href='https://localhost:7110/home/login'" type="button" id="back">
-                    Back</button>
-            
+                Back
+            </button>
+
         </div>
     </div>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script>
-        function btnClick(){
+        function btnClick() {
             var Username = $("#username").val();
             var Password = $("#password").val();
             var Email = $("#email").val();
@@ -43,21 +44,21 @@
             var Qrcode = $("#bank").val();
 
             var obj = {
-                Id : 0,
+                Id: 0,
                 Username: Username,
                 Password: Password,
                 Email: Email,
                 Phone: Phone,
                 Qrcode: Qrcode,
-                Profile_pic: "0",            
+                Profile_pic: "0",
             }
             SubmitForm(obj);
-            
+
 
 
         }
 
-        function SubmitForm(obj){
+        function SubmitForm(obj) {
             $.ajax({
                 url: "/User/Post",
                 method: "POST",
@@ -67,7 +68,7 @@
                     data = JSON.stringify(data);
                     location.href = 'https://localhost:7110/home/login'
                 },
-                error: function (err){
+                error: function (err) {
                     console.error(err);
                 }
 

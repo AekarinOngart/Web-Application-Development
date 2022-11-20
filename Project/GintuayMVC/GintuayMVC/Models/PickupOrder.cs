@@ -10,6 +10,7 @@
         public string EndTime { get; set; }
         public int User_UserId { get; set; }
         public int Image_ImageID { get; set; }
+        public string Qrcode { get; set; }
 
     }
 }

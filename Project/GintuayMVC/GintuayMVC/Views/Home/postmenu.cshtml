@@ -23,7 +23,6 @@
             <li>
                 <img src="~/images/notification.png" class="notification" onclick="show1('menu1')">
                 <ul id="menu1">
-
                 </ul>
                 <img src="~/images/profile.png" class="profile" onclick="show('menu')" />
                 <ul id="menu">
@@ -98,13 +97,13 @@
                             <div class="time">
                                 <label for="">กำหนดเวลา</label>
                                 <br>
-                                <input type="text" name="" id="Time"/>
+                                <input type="text" name="" id="Time" />
                             </div>
                         </div>
                     </div>
                     <div class="btn">
                         <div class="post">
-                            <input type="button" value="Post" onclick="btnClick()"/>
+                            <input type="button" value="Post" onclick="GetID()" />
                         </div>
                         <div class="cancel">
                             <input type="button" value="Cancel" onclick="location.href='https://localhost:7110/home/service'" />
@@ -117,15 +116,35 @@
     <script src="~/js/effect.js"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script>
+        function GetID() {
+            $.ajax({
+                url: "/User/GetAll",
+                method: "GET",
+                success: function (data) {
+                    console.log(data.value[0])
+                    var l = data.value[0];
+                    var l1 = l['qrcode'];
+                    console.log(l1)
+                    btnClick(l1)
 
-         function btnClick(){
+                }
+                ,
+                error: function (err) {
+                    console.error(err);
+                }
+
+            })
+        }
+        function btnClick(l1) {
+
+
             var Name = $("#Menu_name").val();
             var ShopName = $("#Shop_name").val();
             var Price = $("#Price").val();
             var Other = $("#Other").val();
             var EndTime = $("#Time").val();
             var Ssid = sessionStorage.getItem("Ssid", Ssid);
-
+            var Qrcode = l1
 
             var obj = {
                 PickupOrderId: 0,
@@ -135,8 +154,10 @@
                 Other: Other,
                 EndTime: EndTime,
                 User_UserId: Ssid,
-                Image_ImageID: ""
-                    }
+                Image_ImageID: "",
+                Qrcode: Qrcode
+
+            }
             PostOrder(obj);
         }
 
@@ -148,8 +169,9 @@
                 success: function (data) {
                     console.log(data);
                     data = JSON.stringify(data);
+                    location.href = 'https://localhost:7110/home/service'
                 },
-                error: function (err){
+                error: function (err) {
                     console.error(err);
                 }
 
