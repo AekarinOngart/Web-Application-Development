@@ -28,6 +28,14 @@ namespace GintuayMVC.Controllers
         {
             return View();
         }
+        public IActionResult Queueorder()
+        {
+            return View();
+        }
+        public IActionResult Queuebuyorder()
+        {
+            return View();
+        }
 
         public IActionResult Index()
         {
