@@ -9,12 +9,12 @@
 .popup1 {
     background-color: #ffffff;
     width: 90%;
-    height: 80%;
+    height: 100%;
     padding: 10px 20px;
     position: absolute;
     transform: translate(-50%, -50%);
     left: 50%;
-    top: 55%;
+    top: 65%;
     border-radius: 10px;
     border: 5px solid #7F664F;
     font-family: "Poppins", sans-serif;
@@ -38,6 +38,27 @@
     text-align: center;
 }
 
+.note {
+    display: grid;
+}
+
+.mahi {
+    font-size: 18px;
+    margin-top: 5%;
+    font-weight: bold;
+    margin-right: 65%;
+}
+
+.box {
+    width: 50vw;
+    border: 3px solid #7F664F;
+    font-family: "Poppins", sans-serif;
+    display: block;
+    padding: 10px 10px;
+    left: 16%;
+    width: 70%;
+    margin-left: 15%;
+}
 
 
 .btn-popup-success {
@@ -128,6 +149,8 @@ p {
 #address {
     width: 80%;
     padding: 10px 10px;
+    border: 3px solid #7F664F;
+    font-family: "Poppins", sans-serif;
 }
 
 .qr {
@@ -168,12 +191,12 @@ p {
     .popup1 {
         background-color: #ffffff;
         width: 90%;
-        height: 80%;
+        height: 90%;
         padding: 10px 20px;
         position: absolute;
         transform: translate(-50%, -50%);
         left: 50%;
-        top: 55%;
+        top: 57%;
         border-radius: 10px;
         border: 5px solid #7F664F;
         font-family: "Poppins", sans-serif;
@@ -304,6 +327,7 @@ p {
     .popup2 img {
         width: 30%;
     }
+
 
     .popup1 {
         background-color: #ffffff;
@@ -661,6 +685,13 @@ p {
         width: 70%;
     }
 
+    .mahi {
+        font-size: 18px;
+        margin-top: 5%;
+        font-weight: bold;
+        margin-right: 65%;
+    }
+
     .popup1 {
         background-color: #ffffff;
         width: 90%;
@@ -750,6 +781,11 @@ p {
     .popup2 img {
         width: 50%;
     }
+
+    .mahi {
+        font-size: 10px;
+    }
+
 
     .popup1 {
         background-color: #ffffff;

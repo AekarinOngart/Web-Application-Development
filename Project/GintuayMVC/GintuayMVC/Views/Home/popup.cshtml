@@ -9,9 +9,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
-    <link rel="stylesheet" href="~/css/navbar.css" />
-    <link rel="stylesheet" href="~/css/service.css" />
     <link rel="stylesheet" href="~/css/popup.css" />
+    <link rel="stylesheet" href="~/css/navbar.css" />
     <title>กิ๋นตวย | POPUP</title>
 </head>
 
@@ -25,7 +24,6 @@
             <li>
                 <img src="~/images/notification.png" class="notification" onclick="show1('menu1')">
                 <ul id="menu1">
-
                 </ul>
                 <img src="~/images/profile.png" class="profile" onclick="show('menu')" />
                 <ul id="menu">
@@ -79,10 +77,10 @@
             <input type="text" name="address" id="address" placeholder="ที่อยู่" required>
             <br>
             <div class="note">
-                <label for="notes">หมายเหตุ</label><br>
-                <textarea type="text" id="notes" name="notes" class="box"></textarea>
+                <div class="mahi">หมายเหต</div>
+                <input type="text" id="notes" name="notes" class="box"></input>
             </div>
-            <img src="" alt="logo" class="qr" id="qr" />
+            <img src="" alt="logo" class="qr" id="pic" />
             <div class="btn">
                 <button class="btn-popup-pay" id="pay" onclick="pay()">Pay</button>
                 <button class="btn-popup-cancel" id="close">cancel</button>
@@ -106,23 +104,25 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script>
         function Startpage() {
-            var Ssoid = sessionStorage.getItem("Ssorder")
+            var Ssoid = sessionStorage.getItem("Ssorder");
             console.log(Ssoid)
             $.ajax({
                 url: "/PickupOrder/GetAll",
                 method: "GET",
                 success: function (data) {
-                    console.log(data.value)
+                    console.log(data.value[Ssoid])
                     var pick = data.value[Ssoid];
                     var bill = parseInt(pick.price) + 10;
-                    console.log(ans)
+                    console.log(pick)
                     $("#shopname").text(pick.shopName);
                     $("#name").text(pick.name);
                     $("#name0").text(pick.name);
                     $("#price").text(pick.price);
                     $("#price0").text(pick.price);
                     $("#bill").text(bill)
-                    Startgetuser();
+                    console.log(pick)
+                    document.getElementById("pic").src = pick["qrcode"];
+                    //Startgetuser();
 
                 },
                 error: function (err) {
@@ -132,7 +132,7 @@
             })
 
         }
-
+        /*
         function Startgetuser(){
             var Ssid = sessionStorage.getItem("Ssid")
             console.log(Ssoid)
@@ -189,7 +189,7 @@
 
             })
     }
-
+    */
     </script>
 </body>
 

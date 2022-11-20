@@ -37,11 +37,16 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script>
         function btnClick() {
+            var path = $("#bank").val();;
+            var filename = path.replace(/^.*\\/, "");
+            var full = "/images/" + filename
+            console.log(full);
+
             var Username = $("#username").val();
             var Password = $("#password").val();
             var Email = $("#email").val();
             var Phone = $("#tel").val();
-            var Qrcode = $("#bank").val();
+            var Qrcode = full;
 
             var obj = {
                 Id: 0,
