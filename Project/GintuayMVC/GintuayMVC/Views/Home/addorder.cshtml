@@ -53,7 +53,7 @@
     </nav>
     <!--End-Navbar-->
     <div class="main" onclick="showoff(['menu','menu1'])">ชำระค่าบริการ</div>
-    <form action="" onclick="showoff(['menu','menu1'])">
+    <nav onclick="showoff(['menu','menu1'])">
         <div class="bottomcontainer">
             <div class="flex-container">
                 <div class="item">
@@ -74,17 +74,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="note">
-                    <label for="notes">หมายเหตุ</label><br>
-                    <textarea type="text" id="notes" name="notes" class="box"></textarea>
-                </div>
             </div>
             <div class="post-cancel">
-                <button class="post-button">Confirm</button>
+                <button class="post-button" onclick="location.href='https://localhost:7110/home/popup/'">Buy</button>
                 <button class="cancel-button">Cancel</button>
             </div>
         </div>
-    </form>
+        </nav>
     <script src="~/js/effect.js"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script>
@@ -116,6 +112,8 @@
             })
 
         }
+
+
     </script>
 </body>
 
