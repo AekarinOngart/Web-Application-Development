@@ -14,7 +14,7 @@
     <title>กิ๋นตวย | POPUP</title>
 </head>
 
-<body onload="Startpage()">
+<body onload="Startpage1()">
     <!--Navbar-->
     <nav>
         <ul>
@@ -82,7 +82,7 @@
             </div>
             <img src="" alt="logo" class="qr" id="pic" />
             <div class="btn">
-                <button class="btn-popup-pay" id="pay" onclick="pay()">Pay</button>
+                <button class="btn-popup-pay" id="pay" onclick="Startpage()">Pay</button>
                 <button class="btn-popup-cancel" id="close">cancel</button>
             </div>
         </div>
@@ -100,12 +100,12 @@
             </div>
         </div>
     </div>
-    <script src="~/js/effect.js"></script>
+    <!--<script src="~/js/effect.js"></script>-->
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script>
-        function Startpage() {
+        function Startpage1() {
             var Ssoid = sessionStorage.getItem("Ssorder");
-            console.log(Ssoid)
+            console.log(Ssoid, "11111")
             $.ajax({
                 url: "/PickupOrder/GetAll",
                 method: "GET",
@@ -120,9 +120,13 @@
                     $("#price").text(pick.price);
                     $("#price0").text(pick.price);
                     $("#bill").text(bill)
-                    console.log(pick)
+                    console.log(pick, "111111")
+                    var pickupOrderId = pick['pickupOrderId']
+                    var pickupUserId = pick['user_UserId']
                     document.getElementById("pic").src = pick["qrcode"];
-                    //Startgetuser();
+                    console.log("Pick_Order_Id", pickupOrderId, "Pickup_User_Id", pickupUserId, "Bill", bill)
+
+                    
 
                 },
                 error: function (err) {
@@ -132,17 +136,55 @@
             })
 
         }
-        /*
-        function Startgetuser(){
+        function Startpage() {
+            var Ssoid = sessionStorage.getItem("Ssorder");
+            console.log(Ssoid,"11111")
+            $.ajax({
+                url: "/PickupOrder/GetAll",
+                method: "GET",
+                success: function (data) {
+                    console.log(data.value[Ssoid])
+                    var pick = data.value[Ssoid];
+                    var bill = parseInt(pick.price) + 10;
+                    console.log(pick)
+                    $("#shopname").text(pick.shopName);
+                    $("#name").text(pick.name);
+                    $("#name0").text(pick.name);
+                    $("#price").text(pick.price);
+                    $("#price0").text(pick.price);
+                    $("#bill").text(bill)
+                    console.log(pick,"111111")
+                    var pickupOrderId = pick['pickupOrderId'] 
+                    var pickupUserId = pick['user_UserId']
+                    document.getElementById("pic").src = pick["qrcode"];
+                    console.log("Pick_Order_Id",pickupOrderId,"Pickup_User_Id",pickupUserId,"Bill",bill)
+
+                    Startgetuser(pickupOrderId, pickupUserId,bill);
+
+                },
+                error: function (err) {
+                    console.error(err);
+                }
+
+            })
+
+        }
+        
+        function Startgetuser(pickupOrderId, pickupUserId, bill) {
             var Ssid = sessionStorage.getItem("Ssid")
-            console.log(Ssoid)
+            //console.log(Ssoid)
             $.ajax({
                 url: "/User/GetAll",
                 method: "GET",
                 success: function (data) {
-                    console.log(data.value)
-                    var user = data.value[Ssid];
-                    console.log(user)
+                    //console.log(data.value)
+                    var p = Ssid - 1
+                    var user = data.value[p];
+                    var userId = user['id']
+                    //console.log(Ssid)
+                    //console.log(userId)
+
+                    pay(userId, pickupOrderId, pickupUserId, bill)
 
                  
                 },
@@ -154,20 +196,24 @@
         }
 
 
-        function pay(User_UserId, PickupOrder_PickupOrderId, PickupOrder_User_UserId, Location, Other, Bill ) {
+        function pay(userId, pickupOrderId, pickupUserId, bill) {
             //var
             //getpost model 3 model
-
+            var Location = $("#address").val();
+            var Other = $("#notes").val();
+            console.log(userId, pickupOrderId, pickupUserId, bill)
+         
                 var obj = {
                     BuyOrderId: 0,
-                    User_UserId: User_UserId,
-                    PickupOrder_PickupOrderId: PickupOrder_PickupOrderId,
-                    PickupOrder_User_UserId: PickupOrder_User_UserId,
+                    User_UserId: userId,
+                    PickupOrder_PickupOrderId:  pickupOrderId,
+                    PickupOrder_User_UserId: pickupUserId,
                     Location: Location,
                     Other: Other,
-                    Status: 0,
-                    Bill: Bill,
+                    Status: "รอการตรวจสอบ",
+                    Bill: bill,
                 }
+                
                 SubmitForm(obj);
 
 
@@ -189,7 +235,7 @@
 
             })
     }
-    */
+    
     </script>
 </body>
 

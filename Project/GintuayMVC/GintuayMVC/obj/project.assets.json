@@ -592,24 +592,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\chid_\\.nuget\\packages\\": {},
-    "E:\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\It'smeHans\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\chid_\\OneDrive\\เดสก์ท็อป\\Web-Application-Development\\Project\\GintuayMVC\\GintuayMVC\\GintuayMVC.csproj",
+      "projectUniqueName": "C:\\Users\\It'smeHans\\Desktop\\Web-Application-Development\\Project\\GintuayMVC\\GintuayMVC\\GintuayMVC.csproj",
       "projectName": "GintuayMVC",
-      "projectPath": "C:\\Users\\chid_\\OneDrive\\เดสก์ท็อป\\Web-Application-Development\\Project\\GintuayMVC\\GintuayMVC\\GintuayMVC.csproj",
-      "packagesPath": "C:\\Users\\chid_\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\chid_\\OneDrive\\เดสก์ท็อป\\Web-Application-Development\\Project\\GintuayMVC\\GintuayMVC\\obj\\",
+      "projectPath": "C:\\Users\\It'smeHans\\Desktop\\Web-Application-Development\\Project\\GintuayMVC\\GintuayMVC\\GintuayMVC.csproj",
+      "packagesPath": "C:\\Users\\It'smeHans\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\It'smeHans\\Desktop\\Web-Application-Development\\Project\\GintuayMVC\\GintuayMVC\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "E:\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\chid_\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\It'smeHans\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
