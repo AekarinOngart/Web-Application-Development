@@ -48,6 +48,7 @@ namespace Gintuay.Controllers
             return new JsonResult(Ok(result));
         }
 
+
         // Delete
         [HttpDelete]
         public JsonResult Delete(int id)

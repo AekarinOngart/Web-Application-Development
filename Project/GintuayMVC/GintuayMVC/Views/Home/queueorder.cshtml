@@ -14,7 +14,7 @@
     <title>กิ๋นตวย | Check Order</title>
 </head>
 
-<body>
+<body onload="list();">
     <!--Navbar-->
     <nav>
         <ul>
@@ -90,7 +90,53 @@
             <div class="sum">รวมยอด 150฿</div>
         </div>
     </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/js/effect.js"></script>
+
+    <script>
+        /*
+        function list1(){
+            var ss = sessionStorage.getItem("Ssid");
+            console.log(ss)
+            $.ajax({
+                url: "/PickupOrder/GetAll",
+                method: "GET",
+                success: function (data) {
+                    console.log(data)
+                    for (let i in data.value) {
+                        if (data.value[i]['user_UserId'] == ss) {
+                            console.log(data.value[i]['name'])
+                        }
+                    }
+                }, error: function (err) {
+                    console.error(err);
+                }
+            })
+        }*/
+
+
+        function list() {
+            var ss = sessionStorage.getItem("Ssid");
+            console.log(ss)
+            var n = 0;
+            $.ajax({
+                url: "/BuyOrder/GetAll",
+                method: "GET",
+                success: function (data) {
+                    for (let i in data.value){
+                        if (data.value[i]['pickupOrder_User_UserId'] == ss) {
+                        //$(`#name${i}`).text(pick.name);
+                        console.log(data.value[i])
+                        
+                        }
+                    }
+                }, error: function (err) {
+                    console.error(err);
+                }
+            })
+        }
+
+    </script>
 </body>
 
 </html>
