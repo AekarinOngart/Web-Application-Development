@@ -1,22 +1,22 @@
 {
   "version": 2,
-  "dgSpecHash": "z6PLkC5+X6g7sn9Sw0CBBb7qKcFzMsxeXDM6rkrp2CaY14Y8E1fkj5oUzvTMNVHi+WWs9hsnhFT1/LfxpO9rzg==",
+  "dgSpecHash": "Xj4tC+3f01RYXiME4vSWJIfLCHkVXOgNGoxxZgIHT9gmliaPMPFI6FFfD+kRTMLRWGObbsAZrOZ+RxY9gwINBA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\chid_\\OneDrive\\เดสก์ท็อป\\Web-Application-Development\\Project\\GintuayMVC\\GintuayMVC\\GintuayMVC.csproj",
+  "projectFilePath": "C:\\Users\\64015172\\Desktop\\WEB-APPLICATION-DEVELOPMENT\\Project\\GintuayMVC\\GintuayMVC\\GintuayMVC.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\chid_\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.0\\microsoft.entityframeworkcore.7.0.0.nupkg.sha512",
-    "C:\\Users\\chid_\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.0\\microsoft.entityframeworkcore.abstractions.7.0.0.nupkg.sha512",
-    "C:\\Users\\chid_\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.0\\microsoft.entityframeworkcore.analyzers.7.0.0.nupkg.sha512",
-    "C:\\Users\\chid_\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\7.0.0\\microsoft.entityframeworkcore.inmemory.7.0.0.nupkg.sha512",
-    "C:\\Users\\chid_\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
-    "C:\\Users\\chid_\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
-    "C:\\Users\\chid_\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
-    "C:\\Users\\chid_\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
-    "C:\\Users\\chid_\\.nuget\\packages\\microsoft.extensions.logging\\7.0.0\\microsoft.extensions.logging.7.0.0.nupkg.sha512",
-    "C:\\Users\\chid_\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
-    "C:\\Users\\chid_\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\microsoft.extensions.options.7.0.0.nupkg.sha512",
-    "C:\\Users\\chid_\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
-    "C:\\Users\\chid_\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    "C:\\Users\\64015172\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.0\\microsoft.entityframeworkcore.7.0.0.nupkg.sha512",
+    "C:\\Users\\64015172\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.0\\microsoft.entityframeworkcore.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\64015172\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.0\\microsoft.entityframeworkcore.analyzers.7.0.0.nupkg.sha512",
+    "C:\\Users\\64015172\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\7.0.0\\microsoft.entityframeworkcore.inmemory.7.0.0.nupkg.sha512",
+    "C:\\Users\\64015172\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\64015172\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
+    "C:\\Users\\64015172\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "C:\\Users\\64015172\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\64015172\\.nuget\\packages\\microsoft.extensions.logging\\7.0.0\\microsoft.extensions.logging.7.0.0.nupkg.sha512",
+    "C:\\Users\\64015172\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\64015172\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\microsoft.extensions.options.7.0.0.nupkg.sha512",
+    "C:\\Users\\64015172\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "C:\\Users\\64015172\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }

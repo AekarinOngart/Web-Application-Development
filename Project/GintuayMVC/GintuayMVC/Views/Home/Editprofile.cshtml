@@ -22,7 +22,7 @@
                 <img src="~/images/logo.png" alt="logo" id="logo" onclick="location.href='https://localhost:7110/home/service'">
             </li>
             <li>
-                <img src="~/images/notification.png" class="notification" onclick="show1('menu1')">
+                <img src="~/images/notification.png" class="notification" onclick="show1('menu1')" style="display: none;">
                 <ul id="menu1">
                 </ul>
                 <img src="~/images/profile.png" class="profile" onclick="show('menu')">
@@ -72,25 +72,25 @@
                         <label for="Password">Password</label><br>
                         <label for="Phopne">Phone </label><br>
                         <label for="Email">Email</label><br>
-                        <label for="Password">Bank No.</label><br>
+                        <label for="Password" style="display:none;">Bank No.</label><br>
                     </div>
                     <div class="right-right">
                         <input type="text" id="username" name="Username" value=""><br>
                         <input type="password" id="password" name="Password" value=""><br>
                         <input type="text" id="email" name="Email" value=""><br>
                         <input type="text" id="tel" name="Phone" value=""><br>
-                        <input type="text" id="bank" name="bank" value=""><br>
+                        <input type="text" id="bank" name="bank" value="" style="display:none;"><br>
                     </div>
                 </div>
             </div>
             <br><br><br>
-            <div class="qr">
+            <div class="qr" style="display:none;">
                 <button class="qrcode">QR Code</button>
             </div>
         </div>
         <div class="save-cancel">
             <button class="Save" onclick="btnClick()">Save</button>
-            <button class="Cancel">Cancel</button>
+            <button class="Cancel" onclick="location.href = 'https://localhost:7110/home/service'">Cancel</button>
         </div>
     </div>
 
