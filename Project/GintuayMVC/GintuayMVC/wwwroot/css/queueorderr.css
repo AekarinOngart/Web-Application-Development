@@ -44,6 +44,7 @@
 }
 
 .detail {
+    visibility: hidden;
     background-color: rgb(249, 243, 203);
     border-radius: 15px;
     border: 2px solid #7F664F;

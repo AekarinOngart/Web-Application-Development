@@ -9,97 +9,97 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = GintuayMVC
 build_property.RootNamespace = GintuayMVC
-build_property.ProjectDir = C:\Users\It'smeHans\Desktop\Web-Application-Development\Project\GintuayMVC\GintuayMVC\
+build_property.ProjectDir = C:\Users\chid_\OneDrive\เดสก์ท็อป\Web-Application-Development\Project\GintuayMVC\GintuayMVC\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\It'smeHans\Desktop\Web-Application-Development\Project\GintuayMVC\GintuayMVC
+build_property.MSBuildProjectDirectory = C:\Users\chid_\OneDrive\เดสก์ท็อป\Web-Application-Development\Project\GintuayMVC\GintuayMVC
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/It'smeHans/Desktop/Web-Application-Development/Project/GintuayMVC/GintuayMVC/Views/Home/addorder.cshtml]
+[C:/Users/chid_/OneDrive/เดสก์ท็อป/Web-Application-Development/Project/GintuayMVC/GintuayMVC/Views/Home/addorder.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxhZGRvcmRlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/It'smeHans/Desktop/Web-Application-Development/Project/GintuayMVC/GintuayMVC/Views/Home/create_order.cshtml]
+[C:/Users/chid_/OneDrive/เดสก์ท็อป/Web-Application-Development/Project/GintuayMVC/GintuayMVC/Views/Home/create_order.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxjcmVhdGVfb3JkZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/It'smeHans/Desktop/Web-Application-Development/Project/GintuayMVC/GintuayMVC/Views/Home/detailorder.cshtml]
+[C:/Users/chid_/OneDrive/เดสก์ท็อป/Web-Application-Development/Project/GintuayMVC/GintuayMVC/Views/Home/detailorder.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxkZXRhaWxvcmRlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/It'smeHans/Desktop/Web-Application-Development/Project/GintuayMVC/GintuayMVC/Views/Home/Editprofile.cshtml]
+[C:/Users/chid_/OneDrive/เดสก์ท็อป/Web-Application-Development/Project/GintuayMVC/GintuayMVC/Views/Home/Editprofile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFZGl0cHJvZmlsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/It'smeHans/Desktop/Web-Application-Development/Project/GintuayMVC/GintuayMVC/Views/Home/Index.cshtml]
+[C:/Users/chid_/OneDrive/เดสก์ท็อป/Web-Application-Development/Project/GintuayMVC/GintuayMVC/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/It'smeHans/Desktop/Web-Application-Development/Project/GintuayMVC/GintuayMVC/Views/Home/login.cshtml]
+[C:/Users/chid_/OneDrive/เดสก์ท็อป/Web-Application-Development/Project/GintuayMVC/GintuayMVC/Views/Home/login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxsb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/It'smeHans/Desktop/Web-Application-Development/Project/GintuayMVC/GintuayMVC/Views/Home/main.cshtml]
+[C:/Users/chid_/OneDrive/เดสก์ท็อป/Web-Application-Development/Project/GintuayMVC/GintuayMVC/Views/Home/main.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxtYWluLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/It'smeHans/Desktop/Web-Application-Development/Project/GintuayMVC/GintuayMVC/Views/Home/navbar.cshtml]
+[C:/Users/chid_/OneDrive/เดสก์ท็อป/Web-Application-Development/Project/GintuayMVC/GintuayMVC/Views/Home/navbar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxuYXZiYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/It'smeHans/Desktop/Web-Application-Development/Project/GintuayMVC/GintuayMVC/Views/Home/navbar2.cshtml]
+[C:/Users/chid_/OneDrive/เดสก์ท็อป/Web-Application-Development/Project/GintuayMVC/GintuayMVC/Views/Home/navbar2.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxuYXZiYXIyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/It'smeHans/Desktop/Web-Application-Development/Project/GintuayMVC/GintuayMVC/Views/Home/popup.cshtml]
+[C:/Users/chid_/OneDrive/เดสก์ท็อป/Web-Application-Development/Project/GintuayMVC/GintuayMVC/Views/Home/popup.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxwb3B1cC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/It'smeHans/Desktop/Web-Application-Development/Project/GintuayMVC/GintuayMVC/Views/Home/popup2.cshtml]
+[C:/Users/chid_/OneDrive/เดสก์ท็อป/Web-Application-Development/Project/GintuayMVC/GintuayMVC/Views/Home/popup2.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxwb3B1cDIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/It'smeHans/Desktop/Web-Application-Development/Project/GintuayMVC/GintuayMVC/Views/Home/postmenu.cshtml]
+[C:/Users/chid_/OneDrive/เดสก์ท็อป/Web-Application-Development/Project/GintuayMVC/GintuayMVC/Views/Home/postmenu.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxwb3N0bWVudS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/It'smeHans/Desktop/Web-Application-Development/Project/GintuayMVC/GintuayMVC/Views/Home/Privacy.cshtml]
+[C:/Users/chid_/OneDrive/เดสก์ท็อป/Web-Application-Development/Project/GintuayMVC/GintuayMVC/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/It'smeHans/Desktop/Web-Application-Development/Project/GintuayMVC/GintuayMVC/Views/Home/queuebuyorder.cshtml]
+[C:/Users/chid_/OneDrive/เดสก์ท็อป/Web-Application-Development/Project/GintuayMVC/GintuayMVC/Views/Home/queuebuyorder.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxxdWV1ZWJ1eW9yZGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/It'smeHans/Desktop/Web-Application-Development/Project/GintuayMVC/GintuayMVC/Views/Home/queueorder.cshtml]
+[C:/Users/chid_/OneDrive/เดสก์ท็อป/Web-Application-Development/Project/GintuayMVC/GintuayMVC/Views/Home/queueorder.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxxdWV1ZW9yZGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/It'smeHans/Desktop/Web-Application-Development/Project/GintuayMVC/GintuayMVC/Views/Home/register.cshtml]
+[C:/Users/chid_/OneDrive/เดสก์ท็อป/Web-Application-Development/Project/GintuayMVC/GintuayMVC/Views/Home/register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxyZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/It'smeHans/Desktop/Web-Application-Development/Project/GintuayMVC/GintuayMVC/Views/Home/service.cshtml]
+[C:/Users/chid_/OneDrive/เดสก์ท็อป/Web-Application-Development/Project/GintuayMVC/GintuayMVC/Views/Home/service.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxzZXJ2aWNlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/It'smeHans/Desktop/Web-Application-Development/Project/GintuayMVC/GintuayMVC/Views/Shared/Error.cshtml]
+[C:/Users/chid_/OneDrive/เดสก์ท็อป/Web-Application-Development/Project/GintuayMVC/GintuayMVC/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/It'smeHans/Desktop/Web-Application-Development/Project/GintuayMVC/GintuayMVC/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/chid_/OneDrive/เดสก์ท็อป/Web-Application-Development/Project/GintuayMVC/GintuayMVC/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/It'smeHans/Desktop/Web-Application-Development/Project/GintuayMVC/GintuayMVC/Views/_ViewImports.cshtml]
+[C:/Users/chid_/OneDrive/เดสก์ท็อป/Web-Application-Development/Project/GintuayMVC/GintuayMVC/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/It'smeHans/Desktop/Web-Application-Development/Project/GintuayMVC/GintuayMVC/Views/_ViewStart.cshtml]
+[C:/Users/chid_/OneDrive/เดสก์ท็อป/Web-Application-Development/Project/GintuayMVC/GintuayMVC/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/It'smeHans/Desktop/Web-Application-Development/Project/GintuayMVC/GintuayMVC/Views/Shared/_Layout.cshtml]
+[C:/Users/chid_/OneDrive/เดสก์ท็อป/Web-Application-Development/Project/GintuayMVC/GintuayMVC/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-l4vq2q1toz

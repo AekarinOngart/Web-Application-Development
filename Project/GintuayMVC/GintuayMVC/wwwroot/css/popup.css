@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+.btn{
+    margin-top: 40px;
+}
+
 .popup1 {
     background-color: #ffffff;
     width: 90%;
@@ -468,6 +472,7 @@ p {
     p {
         font-size: 12px;
     }
+
 
     .btn-popup-pay,
     .btn-popup-cancel,

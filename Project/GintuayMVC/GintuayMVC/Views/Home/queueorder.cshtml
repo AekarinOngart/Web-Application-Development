@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
-    <link rel="stylesheet" href="~/css/queueorder.css">
+    <link rel="stylesheet" href="~/css/queueorderr.css">
     <link rel="stylesheet" href="~/css/navbar.css">
     <title>กิ๋นตวย | Check Order</title>
 </head>
@@ -19,38 +19,43 @@
     <nav>
         <ul>
             <li>
-                <img src="~/images/logo.png" alt="logo" id="logo">
+                <img src="~/images/logo.png" alt="logo" id="logo" onclick="location.href='https://localhost:7110/home/service'">
             </li>
             <li>
                 <img src="~/images/notification.png" class="notification" onclick="show1('menu1')">
                 <ul id="menu1">
-
                 </ul>
                 <img src="~/images/profile.png" class="profile" onclick="show('menu')">
                 <ul id="menu">
                     <li class="sub-item">
                         <span class="material-icons-outlined"> grid_view </span>
-                        <p>Dashboard</p>
+                        <p onclick="location.href='https://localhost:7110/home/queuebuyorder/'">My Orders[ซื้อ]</p>
                     </li>
                     <li class="sub-item">
                         <span class="material-icons-outlined">
                             format_list_bulleted
                         </span>
-                        <p>My Orders</p>
+                        <p onclick="location.href='https://localhost:7110/home/queueorder/'">My Orders[รับหิ้ว]</p>
                     </li>
                     <li class="sub-item">
                         <span class="material-icons-outlined"> manage_accounts </span>
-                        <p>Update Profile</p>
+                        <p onclick="location.href='https://localhost:7110/home/editprofile/'">Update Profile</p>
                     </li>
                     <li class="sub-item">
                         <span class="material-icons-outlined"> logout </span>
-                        <p>Logout</p>
+                        <p onclick="logout()">Logout</p>
                     </li>
                 </ul>
             </li>
         </ul>
     </nav>
     <!--End-Navbar-->
+    <script>
+        function logout() {
+            sessionStorage.removeItem("Ssid");
+            location.href = 'https://localhost:7110/home/login'
+        }
+    </script>
     <div class="bottom" onclick="showoff(['menu','menu1'])">
         <div class="left">
             <div class="box">
@@ -60,34 +65,37 @@
         </div>
         <div class="right">
             <div class="flex-container">
-                <div class="detail">
+                <div class="detail" id="detail1">
                     <img class="order" src="~/images/Kraprao.jpg">
                     <div class="box">
                         <div class="ordername" id="username1">ชื่อ.........</div>
                         <div class="address" id="address1">ที่อยู่........</div>
+                        <div class="phone" id="phone1">เบอร์โทร........</div>
                     </div>
-                    <div class="status" id="price1">จ่ายเงินแล้ว 50฿</div>
+                    <div class="status" id="price1">...</div>
                 </div>
-                <div class="detail">
+                <div class="detail" id="detail2">
                     <img class="order" src="~/images/Kraprao.jpg">
                     <div class="box">
                         <div class="ordername" id="username2">ชื่อ.........</div>
                         <div class="address" id="address2">ที่อยู่........</div>
+                        <div class="phone" id="phone2">เบอร์โทร........</div>
                     </div>
-                    <div class="status" id="price2">จ่ายเงินแล้ว 50฿</div>
+                    <div class="status" id="price2">...</div>
                 </div>
-                <div class="detail">
+                <div class="detail" id="detail3">
                     <img class="order" src="~/images/Kraprao.jpg">
                     <div class="box">
                         <div class="ordername" id="username3">ชื่อ.........</div>
                         <div class="address" id="address3">ที่อยู่........</div>
+                        <div class="phone" id="phone3">เบอร์โทร........</div>
                     </div>
-                    <div class="status" id="price3">จ่ายเงินแล้ว 50฿</div>
+                    <div class="status" id="price3">...</div>
                 </div>
 
 
             </div>
-            <div class="sum" id="sum">รวมยอด 150฿</div>
+            <div class="sum" id="sum">...</div>
         </div>
     </div>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
@@ -129,20 +137,31 @@
                     var o = 1
                     var alsun = 0
                     for (i in data.value) {
+                        
                         console.log(data.value[i])
                         var gett = data.value[i]
-
                         if (gett['name_pick'] == username) {
                             console.log(gett)
                             $(`#username${o}`).text(gett['username_BuyOrder']);
                             $(`#address${o}`).text(gett['location']);
-                            $(`#price${o}`).text(gett['bill']);
-                            o++
+                            $(`#price${o}`).text(gett['bill'].toString() + " บาท");
+                            $(`#phone${o}`).text("เบอร์โทร "+gett['phone'].toString());
+                            
                             alsun += parseInt(gett['bill'])
                             console.log(alsun)
-                            $("#sum").text(alsun);
-
+                            $("#sum").text(alsun.toString() + " บาท");
+                            if (o == 1) {
+                                document.getElementById("detail1").style.visibility = "visible";
+                            }
+                            else if (o == 2) {
+                                document.getElementById("detail2").style.visibility = "visible";
+                            }
+                            else if (o == 3) {
+                                document.getElementById("detail3").style.visibility = "visible";
+                            }
+                            o++
                         }
+                        
                     }
                     
 

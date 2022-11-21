@@ -13,5 +13,6 @@
         public string Name_order { get; set; }
         public string Name_pick { get; set; }
         public string Username_BuyOrder { get; set; }
+        public string Phone { get; set; }
     }
 }
