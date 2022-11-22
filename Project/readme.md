@@ -1,10 +1,10 @@
 # GintuayAPI
 
-### CRUD API
+### CRUD API (Beta Version)
 
 # GintuayMVC
 
-### CRUD
+### CRUD (Full Version)
 
 # Test (Backend)
 
