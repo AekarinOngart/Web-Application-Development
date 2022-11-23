@@ -4,7 +4,9 @@ using Gintuay.Models;
 using Gintuay.Data;
 
 namespace Gintuay.Controllers
-{ 
+{
+    //[ApiController]
+    //[Route("api/[controller]/[action]")]
     public class UserController : Controller
     {
         private readonly ApiContext _context;
@@ -39,8 +41,6 @@ namespace Gintuay.Controllers
         public JsonResult Put(User user)
         {
           
-           
-            
                 var userInDb = _context.Users.Find(user.Id);
                 if (userInDb == null)
                 {

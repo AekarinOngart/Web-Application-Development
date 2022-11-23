@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "w0YRyGj1Ts9/4FhokNaErId5HthZPICxaKvhm/4nGddTRrqJOaot4YIy6gYVjMoroPiyeoQRctxcGZmUyamKQA==",
+  "dgSpecHash": "MjfwC3GTmMVU7HpTejvugKiW54ORJkbeTHH31JNuOuvBJCRXcMkuduIt2J7ienKsOByq80u1/EdxqVyiomCWIA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\64015172\\Desktop\\WEB-APPLICATION-DEVELOPMENT\\Project\\Gintuay\\Gintuay - Backend\\Gintuay\\Gintuay.csproj",
+  "projectFilePath": "C:\\Users\\64015172\\Desktop\\WEB-APPLICATION-DEVELOPMENT\\Project\\GintuayAPI\\Gintuay\\Gintuay.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\64015172\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.0\\microsoft.entityframeworkcore.7.0.0.nupkg.sha512",
     "C:\\Users\\64015172\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.0\\microsoft.entityframeworkcore.abstractions.7.0.0.nupkg.sha512",
